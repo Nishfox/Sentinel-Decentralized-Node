@@ -1,0 +1,50 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sentinel · siti</title><link rel="alternate" hreflang="en" href="siti-ENG.html"><link rel="alternate" hreflang="it" href="siti.html"><link rel="stylesheet" href="documentation.css"><script defer src="documentation-language.js"></script></head><body><nav class="doc-nav"><a href="index.html">Sentinel</a><a href="siti-ENG.html">English</a><a href="siti.html">Italiano</a></nav><main><h1 id="siti-nodi-e-pubblicazione">Siti, nodi e pubblicazione</h1>
+<p><a href="siti-ENG.html">English</a> · <a href=""siti.md">Italiano</a></p>
+<p>Aggiungi un progetto di hosting dalla dashboard, apri <strong>Cartella</strong> e copia i file del sito che hai già realizzato. Sentinel prepara una pagina di esempio per verificare il server. Sostituiscila con il tuo index.html. La Community Edition non include un editor di siti. Usa <strong>Avvia</strong> e <strong>Anteprima</strong> per il controllo locale. Gli aggiornamenti ai file sono serviti alle richieste successive.</p>
+<p>Ogni progetto ha un nodo dedicato. Seleziona <strong>Collega nodo</strong>, completa <strong>Autorizza nodo</strong> e concedi la capacità Funnel dalla console Tailscale se richiesta. Premi <strong>Pubblica</strong> e copia l’URL effettivo dalla scheda. Usa il dominio assegnato, senza aggiungere www. La verifica pubblica distingue DNS, TLS e risposta HTTP. Per un controllo indipendente prova da rete mobile.</p>
+<p><strong>Rimuovi dal pubblico</strong> chiude Funnel. <strong>Arresta</strong> ferma il server e il nodo del progetto. Per rinominare il titolo, arresta il sito e rimuovi la pubblicazione. L’identità del nodo resta associata al progetto.</p>
+<p>Esporta un backup prima di spostare i contenuti. Il ripristino crea un nuovo progetto spento e il nodo richiede una nuova autorizzazione. <strong>Elimina</strong> richiede il nome del progetto e crea un backup prima di rimuovere la cartella. Verifica l’archivio prima di cancellare contenuti importanti.</p>
+<h2 id="tailscale-dal-primo-accesso-alla-pubblicazione">Tailscale, dal primo accesso alla pubblicazione</h2>
+<ol>
+<li><strong>Installazione del PC.</strong> Il wizard cerca il client Tailscale e lo installa se manca. Se il PC è già collegato, riusa la sessione. Altrimenti accedi dal flusso ufficiale Tailscale.</li>
+<li><strong>Nodo del progetto.</strong> Dopo aver provato il sito in anteprima, premi <strong>Collega nodo</strong> nella sua scheda. Sentinel avvia il nodo dedicato. Se compare <strong>Autorizza nodo</strong>, apri il collegamento ufficiale e autorizza il nodo nella tailnet desiderata. Il login del PC e questa autorizzazione riguardano due dispositivi distinti nella tailnet. Ripeti la prima autorizzazione per gli altri progetti quando richiesta.</li>
+<li><strong>Pubblicazione.</strong> Premi <strong>Pubblica</strong> per configurare Funnel. Se Tailscale richiede di abilitare HTTPS o Funnel, completa il passaggio nella console della tailnet e riprova da Sentinel. Se ti mancano i permessi, rivolgiti al suo amministratore.</li>
+<li><strong>Verifica.</strong> Copia il link HTTPS effettivo dalla scheda senza aggiungere www. Usa <strong>Verifica HTTPS</strong> e prova da un telefono su rete mobile. Per chiudere Funnel, usa <strong>Rimuovi dal pubblico</strong>.</li>
+</ol>
+<p>Per esempio, puoi avere un portfolio e un sito di documentazione sullo stesso PC. Ognuno ha il proprio nodo. Puoi pubblicare il portfolio e tenere la documentazione in anteprima locale.</p>
+<h2 id="preparare-e-verificare-una-versione">Preparare e verificare una versione</h2>
+<p>Per un sito statico, metti <code>index.html</code> nella radice del progetto e conserva le sottocartelle di immagini, fogli di stile e script. Se il tuo team usa un generatore, completa la build e copia i file risultanti. Da <strong>Anteprima</strong>, verifica anche una pagina interna e un’immagine prima di pubblicare.</p>
+<p>Se il sito è già pubblico, prepara la nuova versione in una cartella separata. Durante la copia dei file, richieste diverse potrebbero leggere versioni diverse. Per aggiornamenti importanti, concorda una finestra di manutenzione e conserva una copia della versione precedente.</p>
+<h2 id="esempio-con-tre-persone-sullo-stesso-progetto">Esempio con tre persone sullo stesso progetto</h2>
+<p>Anna modifica le pagine, Luca verifica le modifiche e Marta gestisce Sentinel sul PC che ospita il sito. Anna e Luca usano un repository condiviso per rivedere le modifiche. Marta prende la versione approvata, esporta un backup e copia i file finali nella cartella del progetto. Controlla <strong>Anteprima</strong>, poi verifica l’URL pubblico da rete mobile.</p>
+<p>Il repository gestisce la collaborazione sui file. L’account amministratore di Sentinel serve a gestire l’hosting. I revisori possono controllare la versione pubblicata come visitatori. Per una revisione prima della pubblicazione, il team può eseguire la stessa build in locale.</p>
+<h2 id="capire-dove-si-interrompe-la-pubblicazione">Capire dove si interrompe la pubblicazione</h2>
+<table>
+<thead>
+<tr>
+<th>Esito</th>
+<th>Controllo successivo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anteprima non disponibile</td>
+<td>Verifica che il progetto sia avviato e che la cartella contenga i file attesi</td>
+</tr>
+<tr>
+<td>Anteprima riuscita, DNS pubblico in errore</td>
+<td>Confronta l’URL copiato con quello mostrato nella scheda e verifica lo stato di Funnel</td>
+</tr>
+<tr>
+<td>DNS riuscito, HTTPS in errore</td>
+<td>Usa <strong>Verifica HTTPS</strong> per distinguere il problema TLS da una risposta HTTP</td>
+</tr>
+<tr>
+<td>La pagina si apre, ma mancano immagini</td>
+<td>Controlla percorsi, nomi dei file e contenuto della versione copiata</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Creato da Nishfox · 2026</strong></p>
+</main></body></html>

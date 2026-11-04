@@ -1,0 +1,12 @@
+type: leaky
+name: sentinel/http-abuse
+description: Repeated HTTP rejections on Sentinel sites
+filter: "evt.Meta.log_type == 'sentinel_rejected'"
+groupby: evt.Meta.source_ip
+capacity: 7
+leakspeed: 10s
+blackhole: 2m
+labels:
+  service: http
+  type: bruteforce
+  remediation: true

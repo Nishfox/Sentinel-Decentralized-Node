@@ -1,0 +1,29 @@
+body{margin:0;background:#eaf0f5;color:#182b3e;font:16px/1.5 system-ui}main{max-width:880px;margin:auto;padding:20px}nav,.page{background:white;padding:28px;margin:0 0 24px;border-radius:12px}nav ol{columns:2}h2{color:#143c61}a{color:#126382}figure{margin:14px 0}img{width:100%;max-height:410px;object-fit:contain;object-position:left}figcaption,header,footer{font-size:.85em;color:#435b70}li{margin-bottom:8px}footer{margin-top:24px;border-top:1px solid #bdcedc;padding-top:8px}@media(max-width:600px){nav ol{columns:1}main{padding:8px}.page{padding:16px}}@page{size:A4;margin:14mm}@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}nav{display:none}.page{break-after:page;padding:0;margin:0}.page:last-child{break-after:auto}img{max-height:91mm}figure,li{break-inside:avoid}}
+@media screen{
+ main{max-width:1240px;padding-right:320px;box-sizing:border-box}
+ nav{position:fixed;right:18px;top:18px;width:280px;box-sizing:border-box;max-height:calc(100dvh - 36px);overflow:auto;z-index:5;padding:14px;border:1px solid #bed0df;box-shadow:0 6px 20px #14233820}
+ nav summary{cursor:pointer;font-weight:700;color:#143c61}
+ nav h1{font-size:1.1rem}nav ol{columns:1;list-style:none;padding:0;margin-bottom:0}
+ nav a{display:block;padding:7px 9px;background:#edf4fa;border:1px solid #d0dfec;border-radius:7px;text-decoration:none}
+ nav a:hover,nav a[aria-current]{background:#d4e9f7;color:#123d60;border-color:#7ca8c9}
+ nav a:focus-visible,nav summary:focus-visible{outline:2px solid #126382;outline-offset:2px}
+ .page{scroll-margin-top:20px}
+}
+@media screen and (max-width:800px){
+ main{padding:68px 12px 12px}
+ nav{top:8px;right:8px;width:min(280px,calc(100vw - 16px));max-height:calc(100dvh - 16px)}
+ .page{scroll-margin-top:70px}
+}
+
+@media screen {
+ nav{background:transparent;border:0;box-shadow:none;padding:6px 8px 6px 6px}
+ nav summary{padding:8px 12px;border:1px solid #a9c1d4;border-radius:8px;background:#dfeaf3}
+ nav a{background:#eaf0f5;box-shadow:0 2px 5px #14233818}
+ nav a:hover,nav a[aria-current]{background:#d4e9f7}
+ #manual-index::details-content{opacity:0;transform:translateX(18px);transition:opacity 180ms ease,transform 180ms ease,content-visibility 180ms allow-discrete}
+ #manual-index[open]::details-content{opacity:1;transform:translateX(0)}
+}
+@media (prefers-reduced-motion:reduce){
+ #manual-index::details-content{transition:none}
+}
+

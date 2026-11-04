@@ -1,0 +1,5 @@
+// Sentinel Community Edition | Copyright (c) 2026 Nishfox
+'use strict';
+const fs=require('node:fs'),path=require('node:path');const root=path.resolve(__dirname,'..'),crowd=path.join(root,'runtime','crowdsec-portable','CrowdSec'),templates=path.join(root,'templates','security');
+for(const d of ['data','log','hub','config/parsers/s00-raw','config/parsers/s01-parse','config/parsers/s02-enrich','config/scenarios','config/postoverflows/s00-enrich','config/collections'])fs.mkdirSync(path.join(crowd,d),{recursive:true});
+function copy(folder,prefix=''){for(const entry of fs.readdirSync(folder,{withFileTypes:true})){const relative=prefix+entry.name;if(entry.isDirectory())copy(path.join(folder,entry.name),relative+'/');else{const target=path.join(crowd,'config',relative);fs.mkdirSync(path.dirname(target),{recursive:true});if(!fs.existsSync(target)||relative==='config.yaml'||relative==='acquis.yaml')fs.writeFileSync(target,fs.readFileSync(path.join(folder,entry.name),'utf8').replaceAll('__CROWD__',crowd.replaceAll('\\','/')).replaceAll('__EVENTS__',path.join(root,'runtime','security','events.jsonl').replaceAll('\\','/')));}}}copy(templates);

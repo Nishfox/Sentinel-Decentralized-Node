@@ -1,0 +1,98 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sentinel</title><link rel="stylesheet" href="documentation.css"><link rel="alternate" hreflang="en" href="README.html"><link rel="alternate" hreflang="it" href="Leggimi.html"><script defer src="documentation-language.js"></script></head><body><nav class="doc-nav"><a href="index.html">Sentinel</a><a href="README.html">English</a><a href="Leggimi.html">Italiano</a></nav><main><p><a href="README.html">English</a> · <a href=""Leggimi.md">Italiano</a></p>
+<h1 id="sentinel-decentralized-node-community-edition">Sentinel Decentralized Node — Community Edition</h1>
+<p>Sentinel è un centro di controllo per ospitare e pubblicare più siti statici dal proprio PC Windows. Ogni progetto ha una cartella, un server locale e un nodo Tailscale dedicato. I file vengono serviti dal PC e puoi scegliere quando rendere ciascun sito pubblico.</p>
+<p><strong>Windows · Self-hosted · Dashboard locale · AI opzionale</strong></p>
+<p><a href="manuale.html">Apri il manuale illustrato</a> · <a href="manuale.html">Leggi il manuale su GitHub</a></p>
+<h2 id=""ospita-un-sito-esistente">Ospita un sito esistente</h2>
+<ol>
+<li>Se usi l’installer Windows, configura l’account amministratore nel wizard.</li>
+<li>Apri Sentinel dal collegamento o da <code>Avvia-Sentinel.bat</code>.</li>
+<li>Seleziona <strong>Nuovo sito / nodo</strong> per aggiungere un progetto di hosting. Copia nella cartella i file HTML, CSS, JavaScript e le immagini del sito già realizzato. Sostituisci la pagina di esempio con il tuo index.html.</li>
+<li>Premi <strong>Avvia</strong> e apri <strong>Anteprima</strong>.</li>
+<li>Per la pubblicazione, collega e autorizza il nodo dedicato su Tailscale, poi premi <strong>Pubblica</strong>.</li>
+<li>Apri l’indirizzo HTTPS riportato sulla scheda. Per verificare l’accesso esterno prova anche da un telefono su rete mobile.</li>
+</ol>
+<h2 id="funzionalita">Funzionalità</h2>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Cosa puoi fare</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Siti</td>
+<td>Gestire cartelle, server, anteprime, log e nodi dedicati</td>
+</tr>
+<tr>
+<td>Pubblicazione</td>
+<td>Attivare HTTPS tramite Tailscale Funnel e verificare DNS, TLS e risposta HTTP</td>
+</tr>
+<tr>
+<td>Infrastruttura</td>
+<td>Distinguere server locale, filtro HTTP, connessione del nodo e stato pubblico</td>
+</tr>
+<tr>
+<td>Sicurezza</td>
+<td>Limitare richieste e concorrenza, bloccare file nascosti, applicare quarantene HTTP e verificare l’integrità SHA-256</td>
+</tr>
+<tr>
+<td>Monitoraggio</td>
+<td>Consultare risorse e disponibilità, con integrazioni opzionali CrowdSec, Glances e Uptime Kuma</td>
+</tr>
+<tr>
+<td>Backup</td>
+<td>Esportare ZIP e ripristinare in nuovi progetti spenti</td>
+</tr>
+<tr>
+<td>Accessi</td>
+<td>Proteggere dashboard, API e backup con un account amministratore</td>
+</tr>
+<tr>
+<td>AI</td>
+<td>Consultare dati ed estratti del codice con Qwen locale e ricevere opzioni di chiarimento</td>
+</tr>
+<tr>
+<td>Autopilot</td>
+<td>Eseguire verifiche periodiche e riattivare filtri HTTP secondo regole limitate e registrate</td>
+</tr>
+<tr>
+<td>Interfaccia</td>
+<td>Scegliere il tema chiaro o scuro e la lingua dei menu principali</td>
+</tr>
+</tbody>
+</table>
+<h2 id="guida-nella-dashboard">Guida nella dashboard</h2>
+<p>Sotto <strong>Installazione e diagnostica</strong>, il tag <strong>Istruzioni</strong> apre il manuale HTML illustrato nella dashboard. Il selettore traduce il testo nelle lingue supportate dal browser. Gli screenshot conservano la lingua originale.</p>
+<p>Con <strong>Esegui controllo</strong>, Sentinel verifica nuovamente i componenti locali. Le righe si aggiornano una alla volta. Verde indica un controllo superato, giallo una verifica in sospeso e rosso un errore. Gli esiti del report salvato sono indicati separatamente.</p>
+<h2 id="lingue">Lingue</h2>
+<p>La vetrina offre un selettore con <strong>11 lingue</strong> (Italiano, inglese, russo, francese, tedesco, cinese, spagnolo, arabo, hindi, singalese e tamil). Puoi scegliere la lingua dal menu appena apri il sito.</p>
+<p>Il wizard chiede la lingua all'avvio. Le schermate standard sono disponibili in italiano, inglese, russo, francese, tedesco, spagnolo, arabo e tamil. I campi personalizzati di configurazione sono in italiano o inglese.</p>
+<h2 id="offline-e-online">Offline e online</h2>
+<p>Con i componenti già installati puoi servire siti in locale, creare backup e usare Qwen offline. Il download iniziale dei componenti e del modello richiede Internet. Per pubblicare servono un PC acceso e connesso, un account Tailscale e le autorizzazioni della tailnet.</p>
+<h2 id="installazione-su-windows">Installazione su Windows</h2>
+<p>Puoi avviare il wizard di Windows con un doppio clic oppure da PowerShell, con un comando unico o passo per passo. <a href="installazione.html">Guida di installazione</a>.</p>
+<p>Il wizard collega il PC a Tailscale se serve. Dalla dashboard colleghi e autorizzi il nodo dedicato al sito, poi premi <strong>Pubblica</strong>. La tailnet può chiedere di abilitare Funnel nella console Tailscale. <a href=""siti.md#tailscale-dal-primo-accesso-alla-pubblicazione">Procedura completa</a>.</p>
+<p>Il pacchetto Windows attuale contiene un installer senza firma digitale. Windows può mostrare un avviso di SmartScreen. Verifica di aver scaricato il pacchetto dalla fonte ufficiale del progetto.</p>
+<h2 id="documentazione">Documentazione</h2>
+<ul>
+<li><a href="siti.html">Gestione dei siti e pubblicazione</a></li>
+<li><a href=""sicurezza-ai.md">Sicurezza, monitoraggio e AI</a></li>
+<li><a href="collaudo.html">Collaudo e limiti</a></li>
+<li><a href=""github.md">Preparazione della pubblicazione su GitHub</a></li>
+<li><a href="index.html">Vetrina HTML</a></li>
+<li><a href="THIRD-PARTY.html">Componenti di terze parti</a></li>
+</ul>
+<h2 id=""autore-ed-edizioni">Autore ed edizioni</h2>
+<p>La Community Edition è distribuita con licenza MIT. La futura Enterprise Edition sarà proprietaria e avrà condizioni separate.</p>
+<p><a href="privacy.html">Privacy</a> · <a href=""attribuzione.md">Attribuzione</a></p>
+<h3 id="enterprise-edition-in-sviluppo">Enterprise Edition · In sviluppo</h3>
+<p>Edizione proprietaria per team e organizzazioni. La prima fase è dedicata ai progetti condivisi tra PC, con sincronizzazione, permessi revocabili per utente e progetto, approvazione o pubblicazione diretta degli aggiornamenti, storico e ripristino.</p>
+<p>Le estensioni previste includono SSO e 2FA aziendali, accesso tramite token, backup centralizzati, gestione container, terminale remoto, Web Studio, integrazione con VS Code e federazione tra sedi. Le priorità saranno definite in base alle esigenze dei primi clienti. <a href="enterprise.html">Catalogo completo delle funzionalità previste</a>.</p>
+<h2 id=""stato-del-progetto">Stato del progetto</h2>
+<p>Lo stress test registrato ha completato 30.000 richieste locali su sei siti temporanei. Una successiva esecuzione della suite ha registrato 24 test passati, 9 falliti e 1 saltato, con errori di accesso a loopback tra i fallimenti. La prova di pubblicazione di un nuovo nodo ha raggiunto la richiesta di login Tailscale. Il collaudo su Windows pulito e la verifica di quel nodo da rete mobile restano aperti.</p>
+<p>La Community Edition serve siti statici. Backend applicativi, PostgreSQL e autenticazione a due fattori sono possibili estensioni. Le traduzioni sono parziali. I filtri operano sul traffico HTTP applicativo. L’inferenza AI è consultiva e può produrre errori.</p>
+<hr />
+<p><strong>Creato da Nishfox · 2026</strong></p>
+</main></body></html>

@@ -1,0 +1,86 @@
+1. Copia questa cartella sulla chiavetta USB.
+2. Sul portatile Windows copia la cartella dalla chiavetta al PC.
+3. Apri Sentinel Decentralizer Node Installer.exe e segui il wizard.
+4. Per la prima prova lascia deselezionati AI locale e Monitoraggio e sicurezza.
+5. Al termine apri Sentinel Suite dal menu Start e accedi con l’account scelto.
+
+Tieni il portatile connesso a Internet per scaricare i prerequisiti mancanti.
+Se il wizard richiede l’accesso a Tailscale, completa la procedura ufficiale.
+
+
+SENTINEL DECENTRALIZER NODE · COMMUNITY EDITION
+
+A cosa serve
+
+Sentinel trasforma un PC Windows in un host per uno o più siti già
+realizzati. Dalla dashboard gestisci cartelle, server locali, nodi
+Tailscale e pubblicazione HTTPS. Puoi usarlo per un portfolio, una
+documentazione di progetto, una demo o la versione approvata di un
+sito su cui lavora il tuo team.
+
+Ogni progetto ha una cartella e un nodo Tailscale dedicato. I file
+vengono serviti dal PC che ospita Sentinel. Per visitare un sito
+pubblicato tramite Funnel, ai visitatori basta un browser.
+
+Come usare il primo progetto
+
+1. Apri Sentinel Suite dal menu Start e accedi alla dashboard con
+   le credenziali che hai scelto nel wizard.
+2. In Siti e nodi individua il primo progetto. Premi Cartella e copia
+   i file del sito. Per un sito statico, metti index.html nella radice
+   e conserva le sottocartelle di immagini, CSS e JavaScript.
+3. Premi Avvia e poi Anteprima. Controlla la pagina, le immagini e
+   almeno un collegamento prima di pubblicare.
+4. Per renderlo raggiungibile da Internet, usa Collega nodo, completa
+   l’autorizzazione Tailscale quando richiesta e premi Pubblica.
+5. Copia l’indirizzo HTTPS effettivo dalla scheda. Provalo da un
+   telefono su rete mobile, usando il link così com’è.
+6. Usa Rimuovi dal pubblico per chiudere Funnel e Arresta per fermare
+   il progetto. Puoi gestire gli altri siti dalle rispettive schede.
+
+Come funziona la dashboard
+
+- Siti e nodi gestisce avvio, anteprima, cartelle e pubblicazione.
+- Infrastruttura mostra lo stato del percorso dal server locale
+  al nodo Tailscale e a Internet.
+- Centro sicurezza raccoglie le informazioni sul filtro HTTP,
+  sulle quarantene e sui controlli di integrità dei file.
+- Accessi e IAM gestisce l’account della dashboard. L’account serve per amministrare Sentinel.
+- Risorse e disponibilità raccoglie i controlli e le metriche
+  delle integrazioni di monitoraggio configurate.
+- Analisi AI e AI Chat usano Qwen in locale, se installato, per
+  interpretare stato, log ed errori. Confronta le risposte con i log
+  prima di applicare una modifica.
+- Backup e ripristino permette di salvare e recuperare i progetti.
+- In Installazione e diagnostica, Esegui controllo verifica i
+  componenti locali e mostra gli esiti uno alla volta. Verde indica
+  un controllo superato, giallo una verifica in sospeso, rosso un errore.
+- Il tag Istruzioni apre il manuale illustrato nella dashboard.
+  Il selettore traduce il testo quando il browser supporta la lingua.
+
+Esempio di lavoro in team
+
+Una persona modifica il sito in un repository condiviso, una seconda
+rivede la versione e chi gestisce il PC Sentinel copia i file approvati
+nella cartella del progetto. Prima dell’aggiornamento esporta un backup.
+Dopo la copia controlla l’anteprima e l’indirizzo pubblico.
+
+Uso locale e pubblico
+
+Con i componenti già installati puoi usare anteprime locali, backup
+e inferenza Qwen offline. Per la pubblicazione con Funnel servono
+Internet, l’autorizzazione Tailscale e il PC ospitante acceso con il
+progetto avviato. Per i dettagli consulta la guida in docs\installazione.md
+e il manuale illustrato in docs\manuale.html nella cartella installata.
+
+Tailscale, dal primo accesso alla pubblicazione
+
+1. Installazione del PC. Il wizard cerca il client Tailscale e lo installa se manca. Se il PC è già collegato, riusa la sessione. Altrimenti accedi dal flusso ufficiale Tailscale.
+2. Nodo del progetto. Dopo aver provato il sito in anteprima, premi Collega nodo nella sua scheda. Sentinel avvia il nodo dedicato. Se compare Autorizza nodo, apri il collegamento ufficiale e autorizza il nodo nella tailnet desiderata. Il login del PC e questa autorizzazione riguardano due dispositivi distinti nella tailnet. Ripeti la prima autorizzazione per gli altri progetti quando richiesta.
+3. Pubblicazione. Premi Pubblica per configurare Funnel. Se Tailscale richiede di abilitare HTTPS o Funnel, completa il passaggio nella console della tailnet e riprova da Sentinel. Se ti mancano i permessi, rivolgiti al suo amministratore.
+4. Verifica. Copia il link HTTPS effettivo dalla scheda senza aggiungere www. Usa Verifica HTTPS e prova da un telefono su rete mobile. Per chiudere Funnel, usa Rimuovi dal pubblico.
+
+Per esempio, puoi avere un portfolio e un sito di documentazione sullo stesso PC. Ognuno ha il proprio nodo. Puoi pubblicare il portfolio e tenere la documentazione in anteprima locale.
+
+Creato da Nishfox · 2026
+

@@ -1,0 +1,57 @@
+SENTINEL DECENTRALIZED NODE · COMMUNITY EDITION
+
+INSTALLATION
+
+Copy this folder from your USB drive onto the Windows laptop.
+Open Sentinel Decentralizer Node Installer.exe and complete the wizard.
+For a light first test, leave Local AI and Monitoring and security unchecked.
+Keep Internet access available for missing prerequisites.
+Complete official Tailscale sign-in if requested.
+Open Sentinel Suite from Start and use your setup credentials.
+
+PURPOSE
+
+Sentinel hosts multiple existing static websites from a Windows PC.
+Each project has its own folder and dedicated Tailscale node.
+Files are served by the host PC. Public visitors only need a browser.
+Example uses include portfolios, project documentation and approved team demos.
+
+FIRST PROJECT
+
+In Sites and nodes, choose Folder and copy the website files.
+Place index.html at the project root with images, CSS and scripts.
+Select Start, then Preview. Check pages and links.
+Use Connect node and complete its own Tailscale authorization if requested.
+Select Publish. Your tailnet may require HTTPS or Funnel approval.
+Copy the exact public URL without adding www. Test on mobile data.
+Remove from public closes Funnel. Stop stops the server and node.
+
+DASHBOARD
+
+Sites and nodes manages hosting. Infrastructure maps connection states.
+Security Center shows HTTP filtering, quarantines and integrity checks.
+Access and IAM protects the dashboard, administrative APIs and backups.
+Resources and availability shows configured monitoring integrations.
+AI Analysis and AI Chat use optional local Qwen to interpret evidence.
+Verify AI suggestions against current logs and state.
+Backup and restore saves projects and creates stopped restored copies.
+Installation and diagnostics checks components with green, yellow or red results.
+Instructions opens the illustrated HTML manual with a language selector.
+Browser translation support varies. Screenshots keep their original language.
+
+TEAM EXAMPLE
+
+Developers prepare files in a shared repository and review a version.
+The hosting administrator backs up the site, copies approved files,
+checks Preview and verifies the public URL.
+Remote project synchronization remains planned Enterprise functionality.
+
+LOCAL AND PUBLIC USE
+
+Installed components support local previews, backups and Qwen inference offline.
+Public Funnel hosting needs Internet, tailnet permissions and the host PC on.
+Find the English manual in docs/manuale-ENG.html or docs/manuale-ENG.md.
+Find the installation guide in docs/installazione-ENG.md.
+
+Created by Nishfox · 2026
+

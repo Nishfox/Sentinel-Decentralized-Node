@@ -1,0 +1,9 @@
+aside .sentinel-brand{display:flex;align-items:center;justify-content:center;flex:0 0 auto;margin:-12px -8px 4px;padding:0 0 12px;border-bottom:1px solid #31475b66;text-decoration:none}
+aside .sentinel-brand img{display:block;width:100%;max-width:210px;height:auto;object-fit:contain;filter:drop-shadow(0 5px 8px #0008) drop-shadow(0 0 9px #38bdf815)}
+aside .sentinel-brand:focus-visible{outline:2px solid #62deca;outline-offset:3px;border-radius:8px}
+@media(max-width:650px){aside .sentinel-brand{margin:0 auto 10px;padding:0 0 8px;max-width:130px;border-bottom:0}aside .sentinel-brand img{max-width:130px}}
+.sentinel-edition{display:block;align-self:center;width:max-content;max-width:100%;margin:0 auto 6px;padding:4px 9px;border:1px solid #46768d;border-radius:999px;color:#9bdbf6;font:700 10px/1.4 system-ui,sans-serif;letter-spacing:.06em;text-align:center;text-transform:uppercase}
+html[data-theme=light] .sentinel-edition{color:#174d68;background:#edf7fc;border-color:#9bbfd1}
+.sentinel-brand{flex-direction:column}
+.sentinel-credit{color:#91c4de;letter-spacing:.07em;text-align:center}
+html[data-theme=light] .sentinel-credit{color:#174d68}

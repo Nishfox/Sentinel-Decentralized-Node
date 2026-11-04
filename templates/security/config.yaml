@@ -1,0 +1,36 @@
+common:
+  daemonize: false
+  log_media: file
+  log_level: info
+  log_dir: '__CROWD__/log/'
+config_paths:
+  config_dir: '__CROWD__/config/'
+  data_dir: '__CROWD__/data/'
+  simulation_path: '__CROWD__/config/simulation.yaml'
+  hub_dir: '__CROWD__/hub/'
+  index_path: '__CROWD__/hub/.index.json'
+  notification_dir: '__CROWD__/config/notifications/'
+  plugin_dir: '__CROWD__/plugins/'
+crowdsec_service:
+  acquisition_path: '__CROWD__/config/acquis.yaml'
+  parser_routines: 1
+cscli:
+  output: json
+db_config:
+  type: sqlite
+  db_path: '__CROWD__/data/crowdsec.db'
+api:
+  client:
+    insecure_skip_verify: false
+    credentials_path: '__CROWD__/config/local_api_credentials.yaml'
+  server:
+    listen_uri: 127.0.0.1:8300
+    profiles_path: '__CROWD__/config/profiles.yaml'
+    console_path: '__CROWD__/config/console.yaml'
+    trusted_ips:
+      - 127.0.0.1
+prometheus:
+  enabled: true
+  level: full
+  listen_addr: 127.0.0.1
+  listen_port: 8301

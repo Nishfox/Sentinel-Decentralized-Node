@@ -1,0 +1,200 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sentinel · manuale</title><link rel="alternate" hreflang="it" href="manuale.html"><link rel="alternate" hreflang="en" href="manuale-ENG.html"><link rel="stylesheet" href="documentation.css"><script defer src="documentation-language.js"></script></head><body><nav class="doc-nav"><a href="index.html">Sentinel</a><a href="manuale-ENG.html">English</a><a href="manuale.html">Italiano</a></nav><main><details open><summary>Contents · 25 chapters</summary><ol><li><a href="#welcome">01 · Welcome</a></li><li><a href="#first-launch-on-windows">02 · First launch on Windows</a></li><li><a href="#finding-your-way-around">03 · Finding your way around</a></li><li><a href="#adding-a-project">04 · Adding a project</a></li><li><a href="#previewing-locally">05 · Previewing locally</a></li><li><a href="#connecting-a-tailscale-node">06 · Connecting a Tailscale node</a></li><li><a href="#publishing-and-checking-https">07 · Publishing and checking HTTPS</a></li><li><a href="#editing-logs-and-deletion">08 · Editing, logs and deletion</a></li><li><a href="#reading-the-infrastructure-map">09 · Reading the infrastructure map</a></li><li><a href="#colors-arrows-and-animation">10 · Colors, arrows and animation</a></li><li><a href="#local-checks-windows-firewall-and-vpn">11 · Local checks, Windows Firewall and VPN</a></li><li><a href="#connection-by-connection-diagnosis">12 · Connection-by-connection diagnosis</a></li><li><a href="#security-center">13 · Security Center</a></li><li><a href="#filters-and-integrity">14 · Filters and integrity</a></li><li><a href="#access-and-iam">15 · Access and IAM</a></li><li><a href="#sessions-and-tailscale-rules">16 · Sessions and Tailscale rules</a></li><li><a href="#ai-analysis">17 · AI Analysis</a></li><li><a href="#autopilot">18 · Autopilot</a></li><li><a href="#ai-chat">19 · AI Chat</a></li><li><a href="#resources-and-availability">20 · Resources and availability</a></li><li><a href="#local-tools-and-uptime-kuma">21 · Local tools and Uptime Kuma</a></li><li><a href="#backup-import-and-restore">22 · Backup, import and restore</a></li><li><a href="#installation-and-diagnostics">23 · Installation and diagnostics</a></li><li><a href="#step-by-step-troubleshooting">24 · Step-by-step troubleshooting</a></li><li><a href="#complete-exercise">25 · Complete exercise</a></li></ol></details><h1 id="sentinel-illustrated-user-manual">Sentinel illustrated user manual</h1>
+<p>Sentinel Decentralized Node · Community Edition</p>
+<p><a href="manuale-ENG.html">English</a> · <a href=""manuale.md">Italiano</a></p>
+<p>Each chapter corresponds to an A4 print page in the original manual. In HTML, use the index to jump between chapters and select screenshots to enlarge them. Screenshots retain their original interface language.</p>
+<section class="page"><h2 id="welcome">01 · Welcome</h2>
+<p>
+Sentinel hosts existing static websites. A project combines a file folder, a local server and a dedicated Tailscale node. Keep it stopped, preview it locally or publish it online.</p>
+<ul>
+<li><strong>Example</strong> — Add a Portfolio project, copy <code>index.html</code>, CSS and images, then open Preview.</li>
+<li><strong>Sample page</strong> — Replace the generated test page with your files.</li>
+<li><strong>Reading order</strong> — Follow chapters 2–8 for your first site, Infrastructure for connection states and Backup before major changes.</li>
+</ul>
+</section><section class="page"><h2 id="first-launch-on-windows">02 · First launch on Windows</h2>
+<ul>
+<li><strong>Installer</strong> — Complete setup, choose the projects folder and enter username, password and confirmation.</li>
+<li><strong>Daily launch</strong> — Open the shortcut or <code>Avvia-Sentinel.bat</code>. The launcher can reuse an existing instance. Use its displayed dashboard address.</li>
+<li><strong>Defaults</strong> — HTTP 4310 and HTTPS 4311 when configured. Website preview ports are separate.</li>
+<li><strong>Initial check</strong> — Verify account status in Access and IAM, then inspect the project before publishing.</li>
+</ul>
+</section><section class="page"><h2 id="finding-your-way-around">03 · Finding your way around</h2>
+
+<ul>
+<li><strong>Publishing</strong> — Sites and nodes holds project cards. Infrastructure maps connections.</li>
+<li><strong>Security</strong> — Security Center collects events and checks. Access and IAM protects administration. AI Analysis and AI Chat use the optional local model.</li>
+<li><strong>Monitoring, Data, System</strong> — Resources and availability shows metrics and processes. Backup and restore manages ZIPs. Installation and diagnostics checks the installation.</li>
+<li><strong>Header</strong> — Theme and language controls are near the clock. Logs and some technical text retain their original language.</li>
+</ul>
+</section><section class="page"><h2 id="adding-a-project">04 · Adding a project</h2>
+<ul>
+<li><strong>New site / node</strong> — Enter a project name and inspect the requested node name, which identifies the project in Tailscale.</li>
+<li><strong>Save</strong> — Prepares the project folder and a sample page if <code>index.html</code> is absent. The project appears in the list.</li>
+<li><strong>Folder</strong> — Opens the location where you copy the prepared site, preserving subfolders.</li>
+<li><strong>Example</strong> — Copy <code>images</code> if HTML references <code>images/photo.jpg</code>. Put <code>index.html</code> at the assigned root rather than in an extra export subfolder.</li>
+</ul>
+</section><section class="page"><h2 id="previewing-locally">05 · Previewing locally</h2>
+
+<ul>
+<li><strong>Start</strong> — Starts the local server and its node connection. The site remains private until published.</li>
+<li><strong>Preview</strong> — Opens the local address. If disabled, check the running state.</li>
+<li><strong>Stop</strong> — Stops server and node while retaining the project and files.</li>
+<li><strong>Diagnosis</strong> — If the sample page remains, replace <code>index.html</code>. For missing images, check filename, extension and relative path.</li>
+</ul>
+</section><section class="page"><h2 id="connecting-a-tailscale-node">06 · Connecting a Tailscale node</h2>
+<ul>
+<li><strong>Connect node</strong> — Starts the project node. Local server and node have separate states.</li>
+<li><strong>Authorize node</strong> — Complete the official sign-in link when shown, then return and inspect the state.</li>
+<li><strong>Name and address</strong> — The proposed name is a request. Use the domain actually assigned by Tailscale.</li>
+<li><strong>Example</strong> — A working preview with an authorization prompt points to node access to the tailnet. Complete that step before retrying publication.</li>
+</ul>
+</section><section class="page"><h2 id="publishing-and-checking-https">07 · Publishing and checking HTTPS</h2>
+<ul>
+<li><strong>Publish</strong> — With a connected node, requests Funnel activation. Complete any Funnel authorization.</li>
+<li><strong>Open public / Copy URL / QR code</strong> — Open, copy or encode the project's actual HTTPS address.</li>
+<li><strong>Verify HTTPS</strong> — Checks public DNS, TLS and HTTP from the host PC through a public relay. Wait while activation completes.</li>
+<li><strong>Remove from public</strong> — Closes this project's Funnel. Test independently from a phone with Wi-Fi off.</li>
+</ul>
+</section><section class="page"><h2 id="editing-logs-and-deletion">08 · Editing, logs and deletion</h2>
+<ul>
+<li><strong>Edit</strong> — Stop and unpublish before changing the title. The node identity remains linked to the project.</li>
+<li><strong>Log</strong> — Compare the event timestamp with the message on the project card.</li>
+<li><strong>Clear view</strong> — Clears the displayed general log. Copy useful diagnostic messages first.</li>
+<li><strong>Backup / Delete</strong> — Export an archive first. Delete requires the project name and creates an automatic backup before removing the folder. Verify the archive before deleting important content.</li>
+</ul>
+</section><section class="page"><h2 id="reading-the-infrastructure-map">09 · Reading the infrastructure map</h2>
+
+<ul>
+<li><strong>CONTROL</strong> — PC and dashboard start services and collect state. Select the PC to open local diagnosis.</li>
+<li><strong>WWW / SERVER</strong> — One row per project server.</li>
+<li><strong>F / HTTP FILTER</strong> — Application protection and its counters and configuration.</li>
+<li><strong>T / NODE + FUNNEL</strong> — Dedicated node connection. <strong>I / PUBLIC ACCESS</strong> shows the public-path probe result.</li>
+</ul>
+</section><section class="page"><h2 id="colors-arrows-and-animation">10 · Colors, arrows and animation</h2>
+
+<ul>
+<li><strong>Green</strong> — Active or verified according to that particular check.</li>
+<li><strong>Red</strong> — Stopped state or failed check. An intentionally stopped server can share the color of an unavailable service.</li>
+<li><strong>Yellow</strong> — Attention, such as a detected VPN or an unverified step. Neutral colors indicate unknown data.</li>
+<li><strong>Moving arrows</strong> — Connection directions and state, even without traffic. Use counters for measured requests and select an arrow for details.</li>
+</ul>
+</section><section class="page"><h2 id="local-checks-windows-firewall-and-vpn">11 · Local checks, Windows Firewall and VPN</h2>
+<ul>
+<li><strong>Refresh</strong> — Requests current state. Read timestamps to assess freshness.</li>
+<li><strong>PC and VPN</strong> — Shows hostname, detected VPN interfaces and collection time. Detection does not establish the node's actual routing.</li>
+<li><strong>Firewall</strong> — Windows profiles are read-only diagnostic information. The F filter is configured separately per site.</li>
+<li><strong>Example</strong> — If the node is connected but the server is stopped, inspect WWW before diagnosing the network.</li>
+</ul>
+</section><section class="page"><h2 id="connection-by-connection-diagnosis">12 · Connection-by-connection diagnosis</h2>
+<ul>
+<li><strong>Server</strong> — Inspect folder, state and last check. For 404, verify the requested file and root <code>index.html</code>.</li>
+<li><strong>Filter</strong> — Inspect requests, blocks, active requests and 5xx errors. Block reasons identify relevant limits.</li>
+<li><strong>Node</strong> — Inspect assigned domain, state and timestamp. Complete authorization if requested.</li>
+<li><strong>Internet</strong> — Read DNS, TLS and HTTP separately. The probe runs from the PC to a public relay. Use another network to test a visitor's experience.</li>
+</ul>
+</section><section class="page"><h2 id="security-center">13 · Security Center</h2>
+<p><img src="manuale-img/security.png" alt="Security Center" /></p>
+<ul>
+<li><strong>Refresh</strong> — Reloads events, quarantines, integrity and tool status. Compare timestamps.</li>
+<li><strong>Quarantine</strong> — Choose a project, IP and duration in minutes. Verify the address before confirming.</li>
+<li><strong>Remove block</strong> — Removes a local quarantine. Inspect CrowdSec if blocking persists.</li>
+<li><strong>Events</strong> — Read category and time. A rejected request records a block. Assess context before classifying an attack.</li>
+</ul>
+</section><section class="page"><h2 id="filters-and-integrity">14 · Filters and integrity</h2>
+<ul>
+<li><strong>HTTP filters</strong> — Configure rate, concurrency and request-body size from F. Change one limit at a time.</li>
+<li><strong>429 example</strong> — A legitimate client may have hit a threshold. Compare block counters with expected traffic before changing it.</li>
+<li><strong>Create baseline</strong> — Records hashes of a verified version.</li>
+<li><strong>Check integrity</strong> — Reports added, changed and removed files against that baseline. Review intended changes before replacing the baseline.</li>
+</ul>
+</section><section class="page"><h2 id="access-and-iam">15 · Access and IAM</h2>
+<p><img src="manuale-img/access.png" alt="Access and IAM" /></p>
+<ul>
+<li><strong>Account status</strong> — Shows whether administrator protection is enabled. Configure credentials over HTTPS.</li>
+<li><strong>Form</strong> — Enter username, password and confirmation. Passwords require at least 12 characters. Verify the resulting status.</li>
+<li><strong>Sign out</strong> — Ends the dashboard session.</li>
+<li><strong>Scope</strong> — Protects administration, APIs and backups. Visitors use the public project URL.</li>
+</ul>
+</section><section class="page"><h2 id="sessions-and-tailscale-rules">16 · Sessions and Tailscale rules</h2>
+<ul>
+<li><strong>Session</strong> — Passwords are stored as hashes. Protected session cookies expire after eight hours. Repeated login attempts are limited.</li>
+<li><strong>ACLs and grants</strong> — Review the provided private-access example against your tailnet users and devices.</li>
+<li><strong>Example</strong> — Enable Sentinel authentication to protect administration, then test the local dashboard and public portfolio separately.</li>
+<li><strong>Lost access</strong> — Check HTTPS address and credentials. Avoid repeated attempts during a temporary block.</li>
+</ul>
+</section><section class="page"><h2 id="ai-analysis">17 · AI Analysis</h2>
+<p><img src="manuale-img/ai.png" alt="AI Analysis" /></p>
+<ul>
+<li><strong>Engine and model</strong> — Shows Ollama and Qwen 2.5 1.5B availability. Install optional components before use.</li>
+<li><strong>Analysis</strong> — Collects aggregate site, port, firewall, integrity and block evidence. The dashboard remains usable.</li>
+<li><strong>Cancel / Refresh status</strong> — Stops a request or reloads its state. <strong>Export report</strong> saves an available result.</li>
+<li><strong>Interpretation</strong> — Start with verified findings and compare model advice with state and logs.</li>
+</ul>
+</section><section class="page"><h2 id="autopilot">18 · Autopilot</h2>
+<p><img src="manuale-img/ai.png" alt="Autopilot" /></p>
+<ul>
+<li><strong>Switch</strong> — Starts disabled. When enabled, schedules checks every five minutes while Sentinel runs.</li>
+<li><strong>Check now</strong> — Requests a cycle immediately. Chat and analysis share resources, so wait when busy.</li>
+<li><strong>Supported intervention</strong> — May re-enable HTTP filters on a public site after verifying the finding and current state.</li>
+<li><strong>Log / Undo</strong> — Review actions and restore prior configuration where available. Disable Autopilot if you need to keep a manual choice that conflicts with its rule.</li>
+</ul>
+</section><section class="page"><h2 id="ai-chat">19 · AI Chat</h2>
+<p><img src="manuale-img/ai-chat.png" alt="AI Chat" /></p>
+<ul>
+<li><strong>Send to Qwen</strong> — Ask a specific question, such as “Which ports does the dashboard use?” or “What is the URL of site 1?”</li>
+<li><strong>Clarifications</strong> — An ambiguous “it does not work” can produce selectable options. Provide project, error and step.</li>
+<li><strong>References</strong> — Expand consulted excerpts under a response. Some factual project answers come directly from the backend.</li>
+<li><strong>Cancel / Clear chat</strong> — Stops generation or deletes local history. Keep credentials out of chat.</li>
+</ul>
+</section><section class="page"><h2 id="resources-and-availability">20 · Resources and availability</h2>
+<p><img src="manuale-img/monitoring.png" alt="Monitoring" /></p>
+<ul>
+<li><strong>CPU and memory</strong> — Compare utilization, cores and available memory before and after starting projects or AI.</li>
+<li><strong>Availability</strong> — Inspect project state and retained history. Check measurement times after changes.</li>
+<li><strong>Network</strong> — Glances host metrics describe the PC. Compare site-specific failures with the map and logs.</li>
+<li><strong>Refresh</strong> — Reloads metrics. Inspect process cards if a tool is stopped.</li>
+</ul>
+</section><section class="page"><h2 id="local-tools-and-uptime-kuma">21 · Local tools and Uptime Kuma</h2>
+<ul>
+<li><strong>Start / Stop</strong> — Manage optional processes, considering effects on monitoring or AI.</li>
+<li><strong>Open panel</strong> — Opens the local interface when provided. Kuma and Glances require installation and a running process.</li>
+<li><strong>First Kuma monitor</strong> — Choose SQLite, create an account, add an HTTP(S) monitor using the actual URL and inspect its first measurement.</li>
+<li><strong>Audit</strong> — Dependency findings are separate from process health. Review the saved audit before distribution.</li>
+</ul>
+</section><section class="page"><h2 id="backup-import-and-restore">22 · Backup, import and restore</h2>
+<p><img src="manuale-img/backups.png" alt="Backups" /></p>
+<ul>
+<li><strong>Back up all sites</strong> — Exports projects. A project card can back up a single site.</li>
+<li><strong>Refresh / Download ZIP</strong> — Inspect archive time, contents and size before downloading.</li>
+<li><strong>Import ZIP</strong> — Select a Sentinel archive and await validation. The page shows size limits.</li>
+<li><strong>Restore as new projects</strong> — Creates stopped copies without overwriting existing projects. Check files, preview and authorize fresh nodes. Store keys and credentials separately.</li>
+</ul>
+</section><section class="page"><h2 id="installation-and-diagnostics">23 · Installation and diagnostics</h2>
+<p><img src="manuale-img/diagnostics.png" alt="Diagnostics" /></p>
+<ul>
+<li><strong>Run check</strong> — Verifies dashboard, runtime, launcher files, node helper and backups. Rows reset and reveal current results sequentially. Green means passed, yellow pending or requiring attention, red failed.</li>
+<li><strong>Installation verification</strong> — <code>scripts/verify-installation.ps1</code> also checks launcher process reuse. Its saved report describes the machine and time of collection.</li>
+<li><strong>Full assessment</strong> — Test installation, repeated BAT launch, node authorization, mobile access, backup/restore, Windows reboot and uninstall.</li>
+<li><strong>Stop Sentinel</strong> — Stops dashboard and managed services. Reopen the BAT to return.</li>
+<li><strong>Instructions</strong> — Opens the illustrated manual in a separate window with language controls. Translation depends on browser support.</li>
+</ul>
+</section><section class="page"><h2 id="step-by-step-troubleshooting">24 · Step-by-step troubleshooting</h2>
+<ol>
+<li>If the dashboard fails, run the BAT and use the displayed local URL.</li>
+<li>For a site failure, check its folder and server, then Preview.</li>
+<li>If Preview works, inspect node authorization and Funnel.</li>
+<li>With Funnel active, use Verify HTTPS to identify DNS, TLS or HTTP failure.</li>
+<li>For 403 or 429, inspect Security Center and filter details before changing limits.</li>
+<li>Record project, action, time, HTTP code and relevant message. Redact private URLs, tokens and personal paths before sharing.</li>
+</ol>
+</section><section class="page"><h2 id="complete-exercise">25 · Complete exercise</h2>
+<ol>
+<li>Add a test Portfolio project, copy an existing static site and open Preview.</li>
+<li>Edit a line in <code>index.html</code>, save and reload. Verify you opened the right project if no change appears.</li>
+<li>Find its Infrastructure row and compare server, node and public status.</li>
+<li>Back up and restore it as a new project. Confirm separate folders.</li>
+<li>Optionally authorize and publish the test node, check it from another network, then unpublish.</li>
+<li>Stop the test project, retain useful archives and inspect Diagnostics for unexpected results.</li>
+</ol>
+<p><strong>Created by Nishfox · Community Edition</strong></p>
+</section></main></body></html>
+

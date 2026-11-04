@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Sentinel Community Edition. Gestisci e pubblica siti statici dal tuo PC Windows.">
+<title>Sentinel Decentralized Node · Community Edition</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#ffffff;color:#152438;font:16px/1.65 system-ui,sans-serif}main{max-width:1050px;margin:auto;padding:32px 24px 72px}nav{display:flex;gap:20px;flex-wrap:wrap}a{color:#005878}a:focus-visible{outline:3px solid #005878;outline-offset:4px}.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:center;padding:56px 0}.hero img{width:100%;max-width:340px;justify-self:center;height:auto}.badge{display:inline-block;color:#005878;border:1px solid #8cabb9;border-radius:999px;padding:5px 13px;font-size:.8rem;font-weight:700;letter-spacing:.09em}h1{font-size:clamp(2rem,6vw,4rem);line-height:1.04;margin:18px 0}h2{margin-top:40px}p,li{color:#344b60}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}article{padding:20px;border:1px solid #d3dee8;border-radius:15px;background:#f6f8fb}article h3{margin:0}.cta{display:inline-block;padding:9px 16px;border-radius:9px;background:#d9f2fa;color:#102538;font-weight:700}footer{margin-top:56px;border-top:1px solid #d3dee8;padding-top:20px}@media(max-width:650px){.hero{grid-template-columns:1fr;padding:32px 0}.hero img{max-width:210px;grid-row:1}}
+.signed-logo{margin:0;text-align:center}@media(max-width:650px){.signed-logo{grid-row:1}}.hero-actions{display:flex;align-items:flex-start;gap:12px;flex-wrap:wrap}.download-action{display:grid;gap:4px}.download-action small{display:block;font-weight:500;text-align:center}.download-action .cta{text-align:center;text-decoration:none}
+/* Hero badge and actions */
+.hero .badge{background:#e4ffe9;color:#075627;border-color:#36bc65;box-shadow:0 0 14px #4ade8070,inset 0 1px 0 #fff}
+.hero-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:470px}
+.hero-actions .download-action{display:contents}
+.hero-actions .cta{display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:64px;padding:9px 12px;text-align:center;text-decoration:none;line-height:1.2;color:#102c43;background:linear-gradient(180deg,#e2f8ff 0%,#9fddf6 48%,#6cb9e2 100%);border:1px solid #4c91b9;border-bottom:3px solid #38799d;box-shadow:inset 0 1px 0 #fff,0 4px 0 #b0cfdf,0 8px 15px #204c6933}
+.hero-actions .cta:hover{background:linear-gradient(180deg,#effbff,#b0e5fa 48%,#77c5eb);transform:translateY(-1px)}
+.hero-actions .cta:active{transform:translateY(2px);box-shadow:inset 0 1px 0 #fff,0 2px 0 #b0cfdf}
+.hero-actions .cta small{display:block;margin-top:4px;font-size:.68rem;font-weight:600}
+@media(max-width:380px){.hero-actions{gap:10px}.hero-actions .cta{padding-inline:6px}}
+.hero h1{position:relative;isolation:isolate}
+.hero h1::before{content:"";position:absolute;z-index:-1;pointer-events:none;inset:-.2em -.08em -.2em -1em;background:radial-gradient(ellipse at 33% 40%,#8adfff 0%,#a8eaff 23%,#7cdcff 43%,transparent 74%);filter:blur(13px);opacity:.72;animation:sentinel-halo 8s ease-in-out infinite alternate}
+@keyframes sentinel-halo{from{transform:translate(-6%,-4%) scale(.94);opacity:.54}to{transform:translate(8%,7%) scale(1.04);opacity:.92}}
+@media(prefers-reduced-motion:reduce){.hero h1::before{animation:none}}
+:is(#funzioni,#features) article{background:linear-gradient(165deg,#fff 0%,#f4f8fc 100%);box-shadow:inset 0 1px 0 #fff,0 3px 5px #17375212,0 12px 18px -9px #17375248}
+
+.hero .signed-logo img{filter:drop-shadow(0 3px 3px #1737521f) drop-shadow(0 14px 12px #17375240)}
+
+/* The original artwork is the resting frame at both ends of the loop. */
+.hero .signed-logo{position:relative;isolation:isolate;width:min(100%,340px);justify-self:center;line-height:0}
+.hero .signed-logo img{display:block;width:100%}
+.hero .signed-logo::before,.hero .signed-logo::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:0;
+  mask:url("assets/sentinel-logo.png") center/100% 100% no-repeat;
+}
+.hero .signed-logo::before{
+  background:radial-gradient(ellipse 26% 30% at 50% 43%,#c3faff86, #218eff42 55%,transparent 100%);
+  mix-blend-mode:screen;animation:shield-light 9s ease-in-out infinite;
+}
+.hero .signed-logo::after{
+  background:linear-gradient(108deg,transparent 39%,#73dfff55 45%,#fff 49%,#abebff95 52%,transparent 60%) -125% 0/65% 100% no-repeat;
+  clip-path:inset(70% 0 13%);mix-blend-mode:screen;animation:sentinel-reflection 9s ease-in-out infinite;
+}
+@keyframes shield-light{0%,12%,62%,100%{opacity:0}30%{opacity:.94}43%{opacity:.45}52%{opacity:.72}}
+@keyframes sentinel-reflection{0%,43%{opacity:0;background-position:-125% 0}47%{opacity:.75}62%{opacity:.9}72%,100%{opacity:0;background-position:225% 0}}
+@media(max-width:650px){.hero .signed-logo{width:min(100%,210px)}}
+@media(prefers-reduced-motion:reduce){.hero .signed-logo::before,.hero .signed-logo::after{animation:none}}
+</style>
+<link rel="alternate" hreflang="en" href="index.html"><link rel="alternate" hreflang="it" href="index-ITA.html"><script defer src="documentation-language.js"></script></head>
+<body><main>
+<nav aria-label="Sections"><a href="#funzioni">Features</a><a href="#inizia">Getting started</a><a href="#guide">Guides</a><a href="README.html">README</a><a href="index-ITA.html">Italiano</a></nav>
+<header class="hero"><div><span class="badge">COMMUNITY EDITION</span><h1>Sentinel Decentralized Node</h1><p>Host static websites from your Windows PC. Organize files in project folders, control local servers from a dashboard and publish over HTTPS when ready.</p><div class="hero-actions"><a class="cta" href="#inizia">Host your website</a><span class="download-action"><a class="cta" href="https://github.com/Nishfox/sentinel-decentralized-node/releases/download/v1.0.0/Sentinel-Windows-1.0.0.zip" download>Download for Windows<small>windows · v1.0.0 · .zip</small></a></span></div><p><small>The current Windows installer is unsigned.</small></p></div><figure class="signed-logo"><img src="assets/sentinel-logo.png" alt="Sentinel winged lion emblem · Nishfox" width="1334" height="1179"></figure></header>
+<section id="funzioni"><h2>Features</h2><div class="grid">
+<article><h3>Multiple sites, separate nodes</h3><p>Each project has its own folder, local server and Tailscale identity. Check previews, logs and connectivity from the dashboard.</p></article>
+<article><h3>HTTPS publishing</h3><p>Authorize the dedicated Tailscale node and enable Funnel when you want visitors to reach the site.</p></article>
+<article><h3>Security and backups</h3><p>HTTP filters, quarantines, integrity checks and ZIP backups. Administrator authentication protects local management.</p></article>
+<article><h3>Optional local AI</h3><p>Qwen helps interpret evidence and diagnose problems. Autopilot runs periodic checks with limited, logged interventions.</p></article>
+</div></section>
+<section id="inizia"><h2>Getting started</h2><ol><li>Install Sentinel on Windows using the wizard or launch setup from PowerShell.</li><li>Open Sentinel and add a hosting project.</li><li>Copy your existing website into its folder, start the server and check Preview.</li><li>Complete PC sign-in if requested. Connect and authorize the project's separate node, then select Publish. Approve Funnel in the tailnet console if needed and check the exact HTTPS URL using mobile data.</li></ol><p>After component installation, local previews, backups and Qwen inference can run offline. Publishing needs Internet access, Tailscale permissions and the host PC on.</p></section>
+<section><h2>From your PC to a visitor's browser</h2><div class="grid"><article><h3>01 · Organize</h3><p>Assign each project a folder and copy your team's approved website build.</p></article><article><h3>02 · Verify</h3><p>Start the local server and check pages, images and logs in Preview.</p></article><article><h3>03 · Publish</h3><p>Authorize the dedicated node and enable Funnel. Use the HTTPS URL assigned by Tailscale.</p></article></div></section>
+<section><h2>A team workflow example</h2><p>Developers prepare files in a shared repository. The Sentinel administrator exports a backup, copies the approved build into the project folder and checks the result.</p></section>
+<section><h2>Enterprise Edition · In development</h2><p>A planned proprietary edition for teams. The initial scope covers remote project collaboration, synchronization, revocable permissions, reviewed or direct updates, history and rollback.</p><p>Planned extensions include corporate SSO and 2FA, token access, centralized backups, containers, remote terminal, Web Studio, VS Code integration and federation across locations.</p><a class="cta" href="enterprise-ENG.html">Explore the full Enterprise roadmap</a></section>
+<section id="guide"><h2>Guides and resources</h2><p>Choose from 11 languages using the menu. Static English and Italian documents are available directly. Automatic translations depend on browser language support.</p><ul><li><a href="installazione-ENG.html">Installation guide</a></li><li><a href="manuale-ENG.html">Illustrated user manual</a></li><li><a href="README.html">README online</a> · <a href="README.md" download>Download Markdown</a></li><li><a href="Instructions-ENG.txt">Text instructions</a></li><li><a href="siti-ENG.html">Sites and publishing</a></li><li><a href="sicurezza-ai-ENG.html">Security, monitoring and AI</a></li><li><a href="collaudo-ENG.html">Testing and limitations</a></li></ul></section>
+<footer>Sentinel Decentralized Node · Community Edition<br><strong>Created by Nishfox · 2026</strong> · <a href="privacy-ENG.html">Privacy</a> · <a href="attribuzione-ENG.html">Attribution</a></footer>
+</main></body></html>

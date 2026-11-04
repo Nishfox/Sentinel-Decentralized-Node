@@ -1,0 +1,49 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sentinel · siti</title><link rel="alternate" hreflang="it" href="siti.html"><link rel="alternate" hreflang="en" href="siti-ENG.html"><link rel="stylesheet" href="documentation.css"><script defer src="documentation-language.js"></script></head><body><nav class="doc-nav"><a href="index.html">Sentinel</a><a href="siti-ENG.html">English</a><a href="siti.html">Italiano</a></nav><main><h1 id="sites-nodes-and-publishing">Sites, nodes and publishing</h1>
+<p><a href="siti-ENG.html">English</a> · <a href=""siti.md">Italiano</a></p>
+<p>Add a hosting project, open <strong>Folder</strong> and copy an existing website. Sentinel prepares a sample page for testing the server. Replace it with your own <code>index.html</code>. Community Edition provides hosting rather than a website editor. Select <strong>Start</strong> and <strong>Preview</strong>. File changes are served on subsequent requests.</p>
+<p>Each project has a dedicated node. Use <strong>Connect node</strong>, complete <strong>Authorize node</strong> and grant Funnel capability in the Tailscale console if requested. Select <strong>Publish</strong> and copy the assigned URL from the card. Preserve the exact domain without adding <code>www.</code>. Public checks distinguish DNS, TLS and HTTP. Use mobile data for an independent network test.</p>
+<p><strong>Remove from public</strong> closes Funnel. <strong>Stop</strong> stops the project's server and node. Stop and unpublish before renaming the display title. The node identity stays associated with the project.</p>
+<p>Export a backup before moving content. Restore creates a stopped project whose node needs fresh authorization. <strong>Delete</strong> requires the project name and creates a backup before removing the folder. Verify the archive before deleting important content.</p>
+<h2 id="tailscale-from-sign-in-to-publication">Tailscale from sign-in to publication</h2>
+<ol>
+<li><strong>PC setup.</strong> The wizard finds or installs Tailscale. It reuses an existing connection or asks you to sign in through the official flow.</li>
+<li><strong>Project node.</strong> After checking the preview, select <strong>Connect node</strong>. If <strong>Authorize node</strong> appears, open the official link and authorize the dedicated node in the intended tailnet. The PC and the project node are separate devices. Repeat initial authorization for other projects when requested.</li>
+<li><strong>Publication.</strong> Select <strong>Publish</strong>. Complete HTTPS or Funnel approval in the tailnet console if needed, then retry. Contact the administrator if you lack permission.</li>
+<li><strong>Verification.</strong> Copy the actual HTTPS link without <code>www.</code>. Use <strong>Verify HTTPS</strong> and test on mobile data. Close Funnel with <strong>Remove from public</strong>.</li>
+</ol>
+<p>For example, a portfolio and a documentation site can run on one PC with separate nodes. Publish one and keep the other local.</p>
+<h2 id="preparing-a-version">Preparing a version</h2>
+<p>Place <code>index.html</code> at the project root and preserve image, CSS and script subfolders. If using a generator, complete the build first and copy its output. Test an internal page and an image in Preview.</p>
+<p>Prepare updates separately from a live site. Copying files during publication may expose a mixture of versions. For significant updates, agree on a maintenance window and preserve the previous version.</p>
+<h2 id="three-person-team-example">Three-person team example</h2>
+<p>Anna edits pages, Luca reviews the changes and Marta manages the hosting PC. Anna and Luca collaborate in a shared repository. Marta exports a backup, copies the approved build into the project folder, checks Preview and tests the public URL using mobile data.</p>
+<p>The repository handles file collaboration. The Sentinel administrator account manages hosting. Reviewers can inspect the published version as visitors or run the same build locally before release.</p>
+<h2 id="locating-publication-failures">Locating publication failures</h2>
+<table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Next check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Preview unavailable</td>
+<td>Project running state and expected files</td>
+</tr>
+<tr>
+<td>Preview works, public DNS fails</td>
+<td>Copied URL against the project card and Funnel status</td>
+</tr>
+<tr>
+<td>DNS works, HTTPS fails</td>
+<td>Verify HTTPS to distinguish TLS from HTTP</td>
+</tr>
+<tr>
+<td>Page works, images missing</td>
+<td>Paths, filenames and copied build content</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Created by Nishfox · 2026</strong></p>
+</main></body></html>

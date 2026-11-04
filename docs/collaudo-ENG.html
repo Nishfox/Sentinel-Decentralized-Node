@@ -1,0 +1,54 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sentinel · collaudo</title><link rel="alternate" hreflang="it" href="collaudo.html"><link rel="alternate" hreflang="en" href="collaudo-ENG.html"><link rel="stylesheet" href="documentation.css"><script defer src="documentation-language.js"></script></head><body><nav class="doc-nav"><a href="index.html">Sentinel</a><a href="collaudo-ENG.html">English</a><a href="collaudo.html">Italiano</a></nav><main><h1 id="testing-and-limitations">Testing and limitations</h1>
+<p><a href="collaudo-ENG.html">English</a> · <a href=""collaudo.md">Italiano</a></p>
+<p>The retained test log records 24 passes. A later run recorded 24 passes, 9 failures and 1 skip, including loopback access failures. The isolated stress test completed 30,000 HTTP 200 requests with 64 clients across six temporary sites in 53.23 seconds, with p95 latency of 132.37 ms. It verified 192 MiB using SHA-256, blocked 600 invalid requests, completed 40 stop/start cycles, observed 50 file updates and restored six sites.</p>
+<p>Run <code>npm test</code> for the automated suite. Run <code>node scripts/stress-audit.js</code> for local-loopback load testing with temporary fixtures. Results depend on hardware and local load.</p>
+<p>The user subsequently reported successful installation on a second PC after an initial error still awaiting review. Public HTTPS 200 responses were observed for two project nodes. Independent full installation, reboot and uninstall assessment remains outstanding. Volumetric DDoS protection was outside the test scope. Interface translations are partial. A saved Kuma audit reported 8 high-severity findings and needs review before distribution.</p>
+<h2 id="clean-windows-laptop-checklist">Clean Windows laptop checklist</h2>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Expected result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Install base edition</td>
+<td>Wizard completes and Start shortcut appears</td>
+</tr>
+<tr>
+<td>Open launcher</td>
+<td>Dashboard responds at the displayed address</td>
+</tr>
+<tr>
+<td>Sign in</td>
+<td>Wizard credentials work</td>
+</tr>
+<tr>
+<td>Host a test page and image</td>
+<td>Preview serves both</td>
+</tr>
+<tr>
+<td>Authorize node and publish</td>
+<td>Exact URL works from a phone on mobile data</td>
+</tr>
+<tr>
+<td>Restart Windows</td>
+<td>Record restarted services and confirm saved projects</td>
+</tr>
+<tr>
+<td>Export and restore backup</td>
+<td>Restored project contains expected files</td>
+</tr>
+<tr>
+<td>Uninstall after saving data</td>
+<td>Record the result and remaining data</td>
+</tr>
+</tbody>
+</table>
+<p>In a second test, select optional components. Verify a Qwen chat response, Glances metrics, a working Kuma monitor and CrowdSec status. Record each separately.</p>
+<h2 id="recording-results">Recording results</h2>
+<p>Record Sentinel version, Windows version, step, expected result, actual result and message. For example: “Local preview passed. Public HTTPS failed on mobile data with a DNS error. Dashboard verification still pending.” Mark unavailable tests as <strong>not tested</strong>.</p>
+<p>Installer compilation checks that packaging succeeds. A laptop test checks installation, first launch and uninstall behavior. Loopback load results describe the local server. Public capacity also depends on connectivity and Funnel.</p>
+<p><strong>Created by Nishfox · 2026</strong></p>
+</main></body></html>

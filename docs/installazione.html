@@ -1,0 +1,161 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sentinel · installazione</title><link rel="alternate" hreflang="en" href="installazione-ENG.html"><link rel="alternate" hreflang="it" href="installazione.html"><link rel="stylesheet" href="documentation.css"><script defer src="documentation-language.js"></script></head><body><nav class="doc-nav"><a href="index.html">Sentinel</a><a href="installazione-ENG.html">English</a><a href="installazione.html">Italiano</a></nav><main><h1 id="installazione-e-primo-avvio-su-windows">Installazione e primo avvio su Windows</h1>
+<p><a href="installazione-ENG.html">English</a> · <a href=""installazione.md">Italiano</a></p>
+<p>Sentinel Suite Community Edition ospita siti che hai già preparato. Il wizard installa la dashboard, prepara una cartella per il primo progetto e configura l'accesso amministrativo. Puoi verificare il sito in locale prima di renderlo pubblico.</p>
+<h2 id="prima-di-aprire-il-wizard">1. Prima di aprire il wizard</h2>
+<ul>
+<li>Usa Windows a 64 bit (x64 o ARM64), un account che possa autorizzare l'installazione e una connessione Internet per scaricare i componenti mancanti.</li>
+<li>Scarica <strong>SentinelSuite-Setup.exe</strong> dagli asset della release ufficiale, se disponibile. Il file ZIP dei sorgenti è destinato all'avvio manuale.</li>
+<li>Scegli dove conservare i file dei siti. Tieni a disposizione un account Tailscale e prepara una password nuova per la dashboard.</li>
+<li>Se hai già Sentinel, esporta un backup prima di migrare. Il wizard rifiuta una destinazione che contiene già una configurazione Sentinel.</li>
+</ul>
+<p>Apri l'eseguibile. Windows può chiedere l'autorizzazione tramite UAC. Verifica la provenienza del file prima di concederla. La dicitura <strong>Creato da Nishfox</strong> identifica l'autore nel wizard.</p>
+<blockquote>
+<p>Le schermate del wizard sono state catturate in anteprima con dati dimostrativi. Percorsi e spazio richiesto variano nella procedura reale.</p>
+</blockquote>
+<h2 id="destinazione-dellapplicazione">2. Destinazione dell'applicazione</h2>
+<p><img src="installazione-img/01-destinazione.jpg" alt="Destinazione dell'applicazione" /></p>
+<p>Nella prima schermata, <strong>Select Destination Location</strong>, lascia la destinazione proposta oppure usa <strong>Browse…</strong> per sceglierne una diversa. Questa cartella ospita i file di Sentinel e il launcher. Premi <strong>Next</strong>.</p>
+<h2 id="primo-sito-e-nodo">3. Primo sito e nodo</h2>
+<p><img src="installazione-img/02-sito-nodo.jpg" alt="Primo sito e nodo" /></p>
+<p>In <strong>Primo sito e nodo</strong> compila i due campi separatamente.</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Esempio</th>
+<th>A cosa serve</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nome del primo sito e della sua cartella</td>
+<td>studio-tattoo</td>
+<td>Identifica il progetto e la sua sottocartella</td>
+</tr>
+<tr>
+<td>Nome del nodo del primo sito</td>
+<td>studio-tattoo</td>
+<td>Nome richiesto a Tailscale per il nodo dedicato</td>
+</tr>
+</tbody>
+</table>
+<p>Usa da 1 a 63 caratteri tra lettere minuscole, cifre e trattini interni. Il dominio effettivo verrà confermato da Tailscale e includerà il suffisso della tua tailnet. Premi <strong>Next</strong>.</p>
+<h2 id="cartella-progetti">4. Cartella progetti</h2>
+<p><img src="installazione-img/03-cartella.jpg" alt="Cartella progetti" /></p>
+<p>In <strong>Cartella progetti</strong>, scegli una cartella dedicata ai contenuti web. Per esempio, se scegli <code>D:\Siti</code> e il nome del progetto è <code>studio-tattoo</code>, la cartella del sito sarà <code>D:\Siti\studio-tattoo</code>. Usa <strong>Browse…</strong> per cambiare percorso e <strong>Next</strong> per continuare. Conserva i dati privati fuori dalle cartelle destinate alla pubblicazione.</p>
+<h2 id="account-amministratore">5. Account amministratore</h2>
+<p><img src="installazione-img/04-admin.jpg" alt="Account amministratore" /></p>
+<p>Inserisci un nome utente di 3–32 caratteri tra lettere, cifre, punti, trattini e underscore. Scegli una password di 12–128 caratteri e ripetila nel campo di conferma. Questo account protegge la dashboard. Il supporto 2FA resta una funzionalità futura.</p>
+<h2 id="componenti-opzionali">6. Componenti opzionali</h2>
+<p><img src="installazione-img/05-componenti.jpg" alt="Componenti opzionali" /></p>
+<table>
+<thead>
+<tr>
+<th>Opzione</th>
+<th>Componenti</th>
+<th>Quando selezionarla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI locale</td>
+<td>Python, Ollama e Qwen 2.5 1.5B</td>
+<td>Per usare Analisi AI e AI Chat</td>
+</tr>
+<tr>
+<td>Monitoraggio e sicurezza</td>
+<td>Glances, Uptime Kuma e CrowdSec</td>
+<td>Per aggiungere monitoraggio e integrazioni di sicurezza</td>
+</tr>
+</tbody>
+</table>
+<p>Per una prima installazione leggera puoi lasciare entrambe le caselle deselezionate. Il wizard riusa i prerequisiti compatibili che rileva nei percorsi supportati. WinGet serve se mancano prerequisiti delle opzioni selezionate. Il primo download del modello richiede Internet.</p>
+<h2 id="conferma-e-installa">7. Conferma e installa</h2>
+<p><img src="installazione-img/06-riepilogo.jpg" alt="Conferma e installa" /></p>
+<p>In <strong>Ready to Install</strong> controlla destinazione e componenti selezionati. Usa <strong>Back</strong> per correggere una scelta oppure <strong>Install</strong> per procedere. Una finestra PowerShell può mostrare l'avanzamento. Tienila aperta fino alla conclusione.</p>
+<p>Se Tailscale manca, il bootstrap prova a installarlo. Se richiede l'accesso, segui la finestra ufficiale di Tailscale e torna al wizard. L'installazione prepara il primo progetto. La pubblicazione si attiva dalla sua scheda nella dashboard.</p>
+<p>Se un componente opzionale fallisce, segui il messaggio del wizard per riprovare con <code>scripts/install-wizard-extras.ps1</code>. Dopo l'installazione delle opzioni, se Sentinel è già aperto, usa <strong>Arresta Sentinel</strong> e riavvialo dal launcher.</p>
+<h2 id="apri-sentinel-e-accedi">8. Apri Sentinel e accedi</h2>
+<ol>
+<li>Dal menu Start apri <strong>Sentinel Suite</strong>, oppure fai doppio clic su <strong>Avvia-Sentinel.bat</strong> nella cartella di installazione.</li>
+<li>Usa l'indirizzo mostrato dal launcher. Le porte predefinite sono <code>https://127.0.0.1:4311/</code> per HTTPS e <code>http://127.0.0.1:4310/</code> per HTTP. Per l'accesso amministrativo usa la dashboard HTTPS.</li>
+<li>Accedi con l'utente e la password scelti nel wizard. In <strong>Accessi e IAM</strong> trovi lo stato dell'account.</li>
+</ol>
+<p><img src="manuale-img/access.png" alt="Dashboard Sentinel nella sezione Accessi e IAM" /></p>
+<h2 id="verifica-il-sito-in-locale-e-pubblicalo">9. Verifica il sito in locale e pubblicalo</h2>
+<ol>
+<li>In <strong>Siti e nodi</strong>, trova la scheda del progetto. Premi <strong>Cartella</strong> per aprire il percorso di pubblicazione.</li>
+<li>Copia i file del tuo sito dentro la cartella. Se il sito usa un punto di ingresso statico, metti <code>index.html</code> nella radice del progetto insieme ai suoi asset.</li>
+<li>Premi <strong>Avvia</strong>, poi <strong>Anteprima</strong>. Controlla pagina, immagini e link.</li>
+<li>Per l'accesso dall'esterno, premi <strong>Collega nodo</strong> e autorizzalo in Tailscale se richiesto. Premi <strong>Pubblica</strong> e apri l'URL effettivo dalla scheda. Per provare come visitatore, apri lo stesso URL da un telefono su rete mobile. Copia l'indirizzo così com'è, senza aggiungere <code>www.</code>.</li>
+</ol>
+<p><a href="manuale.html">Consulta il manuale illustrato per tutti i controlli della dashboard</a>.</p>
+<h2 id="tailscale-dal-primo-accesso-alla-pubblicazione">Tailscale, dal primo accesso alla pubblicazione</h2>
+<ol>
+<li><strong>Installazione del PC.</strong> Il wizard cerca il client Tailscale e lo installa se manca. Se il PC è già collegato, riusa la sessione. Altrimenti accedi dal flusso ufficiale Tailscale.</li>
+<li><strong>Nodo del progetto.</strong> Dopo aver provato il sito in anteprima, premi <strong>Collega nodo</strong> nella sua scheda. Sentinel avvia il nodo dedicato. Se compare <strong>Autorizza nodo</strong>, apri il collegamento ufficiale e autorizza il nodo nella tailnet desiderata. Il login del PC e questa autorizzazione riguardano due dispositivi distinti nella tailnet. Ripeti la prima autorizzazione per gli altri progetti quando richiesta.</li>
+<li><strong>Pubblicazione.</strong> Premi <strong>Pubblica</strong> per configurare Funnel. Se Tailscale richiede di abilitare HTTPS o Funnel, completa il passaggio nella console della tailnet e riprova da Sentinel. Se ti mancano i permessi, rivolgiti al suo amministratore.</li>
+<li><strong>Verifica.</strong> Copia il link HTTPS effettivo dalla scheda senza aggiungere www. Usa <strong>Verifica HTTPS</strong> e prova da un telefono su rete mobile. Per chiudere Funnel, usa <strong>Rimuovi dal pubblico</strong>.</li>
+</ol>
+<p>Per esempio, puoi avere un portfolio e un sito di documentazione sullo stesso PC. Ognuno ha il proprio nodo. Puoi pubblicare il portfolio e tenere la documentazione in anteprima locale.</p>
+<h2 id="risolvi-i-problemi-di-primo-avvio">10. Risolvi i problemi di primo avvio</h2>
+<table>
+<thead>
+<tr>
+<th>Sintomo</th>
+<th>Controllo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Destinazione già in uso</td>
+<td>Esporta un backup dall'installazione esistente e scegli una nuova cartella applicativa</td>
+</tr>
+<tr>
+<td>La dashboard non si apre</td>
+<td>Rilancia <strong>Avvia-Sentinel.bat</strong>, leggi l'URL mostrato e verifica eventuali errori sulle porte</td>
+</tr>
+<tr>
+<td>Il browser segnala un problema con il certificato</td>
+<td>Controlla la configurazione TLS locale da <strong>Installazione e diagnostica</strong> e il certificato previsto per la tua installazione</td>
+</tr>
+<tr>
+<td>L'anteprima risponde ma il dominio pubblico no</td>
+<td>Controlla autorizzazione del nodo, stato di Funnel e URL esatto dalla scheda; usa <strong>Verifica HTTPS</strong> quando disponibile</td>
+</tr>
+<tr>
+<td>AI o monitoraggio non disponibili</td>
+<td>Controlla il risultato dell'installazione opzionale e riapri Sentinel dopo il completamento</td>
+</tr>
+</tbody>
+</table>
+<p>Lo script <code>scripts/verify-installation.ps1</code> verifica il launcher e i componenti. Per disinstallare, esporta prima i backup necessari e usa <strong>Arresta Sentinel</strong>.</p>
+<h2 id="installazione-con-powershell">Installazione con PowerShell</h2>
+<p>Entrambi i metodi scaricano e aprono lo stesso wizard. Quando disponibile, copia il link diretto all’asset <strong>SentinelSuite-Setup.exe</strong> dalla release ufficiale. Nel wizard scegli le cartelle e l’account, poi seleziona <strong>AI locale</strong> e <strong>Monitoraggio e sicurezza</strong> se vuoi installare anche i pacchetti opzionali.</p>
+<h3 id="metodo-1-download-e-avvio-in-un-comando">Metodo 1 · Download e avvio in un comando</h3>
+<p>Incolla la riga in PowerShell e, quando richiesto, incolla il link copiato.</p>
+<pre><code class="language-powershell">$url = Read-Host 'Link diretto a SentinelSuite-Setup.exe'; $setup = Join-Path $env:TEMP ('SentinelSuite-' + [guid]::NewGuid() + '.exe'); Invoke-WebRequest -Uri $url -OutFile $setup -UseBasicParsing -ErrorAction Stop; Start-Process -FilePath $setup -Wait
+</code></pre>
+<h3 id="metodo-2-un-passaggio-alla-volta">Metodo 2 · Un passaggio alla volta</h3>
+<p>Esegui i blocchi nello stesso terminale, nell’ordine indicato.</p>
+<ol>
+<li><p>Incolla il link della release quando PowerShell te lo chiede.</p>
+<pre><code class="language-powershell">$url = Read-Host 'Link diretto a SentinelSuite-Setup.exe'
+</code></pre>
+</li>
+<li><p>Scarica l’installer in un file temporaneo dedicato.</p>
+<pre><code class="language-powershell">$setup = Join-Path $env:TEMP ('SentinelSuite-' + [guid]::NewGuid() + '.exe')
+Invoke-WebRequest -Uri $url -OutFile $setup -UseBasicParsing -ErrorAction Stop
+</code></pre>
+</li>
+<li><p>Quando il download è riuscito, avvia il wizard.</p>
+<pre><code class="language-powershell">Start-Process -FilePath $setup -Wait
+</code></pre>
+</li>
+</ol>
+<p>Completa le schermate illustrate nella guida, rispondi alla richiesta di autorizzazione di Windows e accedi a Tailscale se richiesto.</p>
+<h3 id="avvio-dai-sorgenti">Avvio dai sorgenti</h3>
+<p>Usa Node.js 20 o successivo e apri <strong>Avvia-Sentinel.bat</strong> dalla cartella del progetto. Configura l'account in <strong>Accessi e IAM</strong> dalla dashboard HTTPS. Per le integrazioni consulta <a href="sicurezza-ai.html">Sicurezza e AI</a>.</p>
+<hr />
+<p><strong>Creato da Nishfox · 2026</strong></p>
+"</main></body></html>

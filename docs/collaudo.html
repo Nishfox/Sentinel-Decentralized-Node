@@ -1,0 +1,55 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sentinel · collaudo</title><link rel="alternate" hreflang="en" href="collaudo-ENG.html"><link rel="alternate" hreflang="it" href="collaudo.html"><link rel="stylesheet" href="documentation.css"><script defer src="documentation-language.js"></script></head><body><nav class="doc-nav"><a href="index.html">Sentinel</a><a href="collaudo-ENG.html">English</a><a href="collaudo.html">Italiano</a></nav><main><h1 id="collaudo-e-limiti">Collaudo e limiti</h1>
+<p><a href="collaudo-ENG.html">English</a> · <a href=""collaudo.md">Italiano</a></p>
+<p>Il log di collaudo conservato registra 24 test superati. Una successiva esecuzione ha registrato 24 passati, 9 falliti e 1 saltato, con errori di accesso a loopback tra i fallimenti. Lo stress test isolato ha completato 30.000 richieste HTTP 200 con 64 client su sei siti temporanei in 53,23 secondi, con latenza p95 di 132,37 ms. Ha verificato 192 MiB via SHA-256, bloccato 600 richieste non valide, completato 40 cicli di arresto e avvio, mostrato 50 aggiornamenti dei file e ripristinato sei siti.</p>
+<p>Esegui <code>npm test</code> per la suite automatica. Esegui <code>node scripts/stress-audit.js</code> per ripetere il carico su loopback con fixture temporanee. Le misure dipendono dall’hardware e dal carico locale.</p>
+<p>La prova reale ha confermato HTTP locale e ha raggiunto il login richiesto dal nuovo nodo. Restano da verificare la pubblicazione di quel nodo da rete mobile, l’installazione su Windows pulito, il riavvio e la disinstallazione. La mitigazione DDoS volumetrica esula dalle prove. Le traduzioni coprono parte dell’interfaccia. L’audit Kuma salvato riportava 8 segnalazioni elevate e richiede riesame prima della distribuzione.</p>
+<h2 id="prova-su-un-portatile-windows-pulito">Prova su un portatile Windows pulito</h2>
+<table>
+<thead>
+<tr>
+<th>Passaggio</th>
+<th>Risultato atteso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Installa la versione base</td>
+<td>Il wizard termina e compare Sentinel Suite nel menu Start</td>
+</tr>
+<tr>
+<td>Apri il launcher</td>
+<td>La dashboard risponde all’indirizzo indicato</td>
+</tr>
+<tr>
+<td>Accedi come amministratore</td>
+<td>Le credenziali create nel wizard consentono l’accesso</td>
+</tr>
+<tr>
+<td>Ospita una pagina di prova con un’immagine</td>
+<td>L’anteprima serve entrambi i file</td>
+</tr>
+<tr>
+<td>Autorizza il nodo e pubblica</td>
+<td>L’URL effettivo risponde da un telefono con Wi-Fi spento</td>
+</tr>
+<tr>
+<td>Riavvia Windows</td>
+<td>Verifica quali servizi ripartono e che il progetto sia ancora presente</td>
+</tr>
+<tr>
+<td>Esporta un backup e prova il ripristino</td>
+<td>Il progetto ripristinato contiene i file attesi</td>
+</tr>
+<tr>
+<td>Disinstalla dopo aver salvato i dati</td>
+<td>Verifica il risultato della procedura e registra quali dati restano</td>
+</tr>
+</tbody>
+</table>
+<p>Su una seconda prova seleziona anche i componenti opzionali. Verifica una risposta di Qwen in <strong>AI Chat</strong>, le metriche in Glances, un monitor funzionante in Kuma e lo stato di CrowdSec in Sentinel. Registra ogni componente separatamente.</p>
+<h2 id="come-registrare-un-risultato">Come registrare un risultato</h2>
+<p>Annota versione di Sentinel, versione di Windows, passaggio, risultato atteso, risultato effettivo ed eventuale messaggio. Esempio: «Anteprima locale riuscita, HTTPS pubblico non riuscito. Da rete mobile il browser mostra un errore DNS. Verifica HTTPS dalla scheda in attesa». Segna come <strong>non provato</strong> ciò che richiede ancora un account o un ambiente disponibile.</p>
+<p>La compilazione dell’installer verifica che il pacchetto si possa costruire. Il test sul portatile verifica ciò che accade davvero durante installazione, primo avvio e disinstallazione. I risultati del carico su loopback descrivono il server nella prova locale, mentre la capacità pubblica dipende anche dalla connessione e dal percorso Funnel.</p>
+<hr />
+<p><strong>Creato da Nishfox · 2026</strong></p>
+</main></body></html>

@@ -1,0 +1,136 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sentinel · installazione</title><link rel="alternate" hreflang="it" href="installazione.html"><link rel="alternate" hreflang="en" href="installazione-ENG.html"><link rel="stylesheet" href="documentation.css"><script defer src="documentation-language.js"></script></head><body><nav class="doc-nav"><a href="index.html">Sentinel</a><a href="installazione-ENG.html">English</a><a href="installazione.html">Italiano</a></nav><main><h1 id="windows-installation-and-first-launch">Windows installation and first launch</h1>
+<p><a href="installazione-ENG.html">English</a> · <a href=""installazione.md">Italiano</a></p>
+<p>Sentinel hosts websites you have already built. The wizard installs the dashboard, prepares the first project folder and configures administrator access. Check your site locally before publishing it.</p>
+<h2 id="before-starting">1. Before starting</h2>
+<p>Use 64-bit Windows, an account able to approve installation and an Internet connection for missing components. Download the installer from the official release when available. A source-code ZIP is for manual setup. Choose a location for your sites, have your Tailscale account ready and choose a new dashboard password.</p>
+<p>If you already use Sentinel, export a backup before migrating. The wizard rejects a destination containing an existing Sentinel configuration. Windows may request UAC approval. Verify the file's origin. The Nishfox credit identifies the author.</p>
+<p>Screenshots were captured in a preview wizard using demonstration data. Paths and required disk space vary. The current summary page contains additional details.</p>
+<h2 id="application-destination">2. Application destination</h2>
+<p><img src="installazione-img/01-destinazione.jpg" alt="Application destination" /></p>
+<p>In <strong>Select Destination Location</strong>, keep the suggested folder or use <strong>Browse</strong>. This folder holds Sentinel and its launcher. Select <strong>Next</strong>.</p>
+<h2 id="first-website-and-node">3. First website and node</h2>
+<p><img src="installazione-img/02-sito-nodo.jpg" alt="First website and node" /></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Example</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First site and folder name</td>
+<td>studio-tattoo</td>
+<td>Project name and subfolder</td>
+</tr>
+<tr>
+<td>First site node name</td>
+<td>studio-tattoo</td>
+<td>Requested Tailscale node name</td>
+</tr>
+</tbody>
+</table>
+<p>Use 1–63 lowercase letters, digits and internal hyphens. Tailscale confirms the final domain, including the tailnet suffix. Continue with <strong>Next</strong>.</p>
+<h2 id="projects-folder">4. Projects folder</h2>
+<p><img src="installazione-img/03-cartella.jpg" alt="Projects folder" /></p>
+<p>Choose a dedicated web-content folder. With <code>D:\Sites</code> and project name <code>studio-tattoo</code>, the website folder is <code>D:\Sites\studio-tattoo</code>. Use <strong>Browse</strong> to change it and <strong>Next</strong> to continue. Keep private files outside published folders.</p>
+<h2 id="administrator-account">5. Administrator account</h2>
+<p><img src="installazione-img/04-admin.jpg" alt="Administrator account" /></p>
+<p>Use a 3–32 character username containing letters, digits, dots, hyphens or underscores. Enter a 12–128 character password and repeat it. This account protects administration. Two-factor authentication remains future work.</p>
+<h2 id="optional-components">6. Optional components</h2>
+<p><img src="installazione-img/05-componenti.jpg" alt="Optional components" /></p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Components</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Local AI</td>
+<td>Python, Ollama, Qwen 2.5 1.5B</td>
+<td>AI Analysis and AI Chat</td>
+</tr>
+<tr>
+<td>Monitoring and security</td>
+<td>Glances, Uptime Kuma, CrowdSec</td>
+<td>Monitoring and security integrations</td>
+</tr>
+</tbody>
+</table>
+<p>For a light installation, leave both unchecked. The wizard reuses compatible prerequisites found in supported locations. WinGet is required to install missing optional prerequisites. The first model download requires Internet access.</p>
+<h2 id="review-and-install">7. Review and install</h2>
+<p><img src="installazione-img/06-riepilogo.jpg" alt="Review and install" /></p>
+<p>In <strong>Ready to Install</strong>, review your choices. Use <strong>Back</strong> to edit or <strong>Install</strong> to proceed. A PowerShell window may show progress. Keep it open until completion.</p>
+<p>The bootstrap attempts to install Tailscale when absent. Complete the official Tailscale sign-in when requested and return to setup. Publishing is enabled later from the project card.</p>
+<p>If an optional component fails, follow the wizard message to retry with <code>scripts/install-wizard-extras.ps1</code>. After adding components, stop and reopen Sentinel to load them.</p>
+<h2 id="launch-and-sign-in">8. Launch and sign in</h2>
+<ol>
+<li>Open <strong>Sentinel Suite</strong> from Start or run <code>Avvia-Sentinel.bat</code> in the installation folder.</li>
+<li>Use the address shown by the launcher. Defaults are <code>https://127.0.0.1:4311/</code> and <code>http://127.0.0.1:4310/</code>. Use HTTPS for administration.</li>
+<li>Sign in with the credentials chosen in setup. <strong>Access and IAM</strong> shows account status.</li>
+</ol>
+<p><img src="manuale-img/access.png" alt="Access and IAM" /></p>
+<h2 id="preview-and-publish">9. Preview and publish</h2>
+<p>Find the project in <strong>Sites and nodes</strong>, select <strong>Folder</strong> and copy your website files. Place <code>index.html</code> at the project root with its assets. Select <strong>Start</strong>, then <strong>Preview</strong>, and check pages, images and links. Connect the dedicated node and authorize it when requested. Select <strong>Publish</strong> and use the exact HTTPS address from the card. Test on a phone using mobile data. Keep the address unchanged, including the absence of <code>www.</code>.</p>
+<p><a href="manuale-ENG.html">Read the illustrated manual</a>.</p>
+<h2 id="tailscale-from-sign-in-to-publication">Tailscale from sign-in to publication</h2>
+<p>The installer connects the PC to Tailscale, reusing an existing session when available. Each site's embedded node is a separate device in the tailnet and may need its own initial authorization through <strong>Authorize node</strong>.</p>
+<p><strong>Publish</strong> enables Funnel. If Tailscale requires HTTPS or Funnel approval, complete it in the tailnet console and retry. Ask your tailnet administrator if your account lacks permissions. Use <strong>Verify HTTPS</strong> and mobile data to check the result. <strong>Remove from public</strong> closes Funnel.</p>
+<p>A portfolio and a documentation site on the same PC have separate nodes. You can publish the portfolio while keeping documentation local.</p>
+<h2 id="first-launch-troubleshooting">10. First-launch troubleshooting</h2>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Destination already used</td>
+<td>Export a backup and choose a new application folder</td>
+</tr>
+<tr>
+<td>Dashboard unavailable</td>
+<td>Relaunch the BAT, use its displayed URL and inspect port errors</td>
+</tr>
+<tr>
+<td>Certificate warning</td>
+<td>Check local TLS configuration in Installation and diagnostics</td>
+</tr>
+<tr>
+<td>Preview works, public site fails</td>
+<td>Check node authorization, Funnel status, exact URL and Verify HTTPS</td>
+</tr>
+<tr>
+<td>AI or monitoring unavailable</td>
+<td>Review optional installation results and restart Sentinel</td>
+</tr>
+</tbody>
+</table>
+<p><code>scripts/verify-installation.ps1</code> checks the launcher and components. Save necessary backups and stop Sentinel before uninstalling.</p>
+<h2 id="powershell-installation">PowerShell installation</h2>
+<p>Both methods download and open the same wizard. Copy the direct installer asset URL from the official release when available. Select the optional AI and monitoring packages inside setup.</p>
+<h3 id="method-1-one-command">Method 1 · One command</h3>
+<p>Paste the command into PowerShell, then enter the direct EXE URL.</p>
+<pre><code class="language-powershell">$url = Read-Host 'Direct Sentinel installer EXE URL'; $setup = Join-Path $env:TEMP ('SentinelSuite-' + [guid]::NewGuid() + '.exe'); Invoke-WebRequest -Uri $url -OutFile $setup -UseBasicParsing -ErrorAction Stop; Start-Process -FilePath $setup -Wait
+</code></pre>
+<h3 id="method-2-step-by-step">Method 2 · Step by step</h3>
+<p>Run these in the same terminal, in order.</p>
+<pre><code class="language-powershell">$url = Read-Host 'Direct Sentinel installer EXE URL'
+</code></pre>
+<pre><code class="language-powershell">$setup = Join-Path $env:TEMP ('SentinelSuite-' + [guid]::NewGuid() + '.exe')
+Invoke-WebRequest -Uri $url -OutFile $setup -UseBasicParsing -ErrorAction Stop
+</code></pre>
+<p>After a successful download, launch setup.</p>
+<pre><code class="language-powershell">Start-Process -FilePath $setup -Wait
+</code></pre>
+<p>Complete the wizard, approve Windows elevation when appropriate and sign in to Tailscale when requested.</p>
+<h3 id="running-from-source">Running from source</h3>
+<p>Use Node.js 20 or later and open <code>Avvia-Sentinel.bat</code> in the project folder. Configure administrator access through the HTTPS dashboard. <a href="sicurezza-ai-ENG.html">Security and AI integrations</a>.</p>
+<p><strong>Created by Nishfox · 2026</strong></p>
+"</main></body></html>

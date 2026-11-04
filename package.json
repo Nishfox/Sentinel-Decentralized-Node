@@ -1,0 +1,16 @@
+{
+  "name": "sentinel-suite",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Windows local web server and Tailscale Funnel dashboard",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node scripts/run-tests.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "author": "Nishfox"
+}
+

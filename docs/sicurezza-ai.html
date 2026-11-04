@@ -1,0 +1,45 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sentinel · sicurezza-ai</title><link rel="alternate" hreflang="en" href="sicurezza-ai-ENG.html"><link rel="alternate" hreflang="it" href="sicurezza-ai.html"><link rel="stylesheet" href="documentation.css"><script defer src="documentation-language.js"></script></head><body><nav class="doc-nav"><a href="index.html">Sentinel</a><a href="sicurezza-ai-ENG.html">English</a><a href="sicurezza-ai.html">Italiano</a></nav><main><h1 id="sicurezza-monitoraggio-e-ai">Sicurezza, monitoraggio e AI</h1>
+<p><a href="sicurezza-ai-ENG.html">English</a> · <a href=""sicurezza-ai.md">Italiano</a></p>
+<p>Attiva l’account da <strong>Accessi e IAM</strong> su HTTPS. Protegge il pannello, le API amministrative e i backup. I visitatori dei siti pubblici accedono ai contenuti pubblicati direttamente.</p>
+<p>Il filtro HTTP limita frequenza, concorrenza, metodi e dimensioni delle richieste e protegge file nascosti e percorsi esterni. Le quarantene operano per sito. CrowdSec può fornire decisioni al filtro HTTP. Windows Firewall e VPN sono mostrati a fini diagnostici. Per monitorare le modifiche ai file crea un riferimento di integrità in <strong>Centro sicurezza</strong>. Valuta le variazioni prima di aggiornare il riferimento.</p>
+<p>In <strong>Risorse e disponibilità</strong> puoi consultare le metriche di Glances e aprire Uptime Kuma. In Kuma scegli SQLite, crea il tuo account e aggiungi i monitor. L’audit salvato di Kuma contiene segnalazioni da valutare prima di una release.</p>
+<p>In <strong>Analisi AI</strong> puoi generare ed esportare un report. In <strong>AI Chat</strong> puoi chiedere lo stato di un sito, l’URL, le porte o una diagnosi. Le risposte attingono a dati correnti ed estratti pertinenti del codice. Verifica i suggerimenti rispetto alle evidenze.</p>
+<p>Autopilot parte spento. Una volta attivato controlla ogni cinque minuti mentre Sentinel è acceso e può riattivare filtri HTTP spenti su siti pubblici dopo verifica. Consulta il registro e usa <strong>Annulla intervento</strong> quando disponibile. Le quarantene deterministiche sono indipendenti dall’AI.</p>
+<h2 id="scegliere-il-controllo-giusto">Scegliere il controllo giusto</h2>
+<table>
+<thead>
+<tr>
+<th>Domanda</th>
+<th>Dove guardare</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chi può amministrare Sentinel?</td>
+<td><strong>Accessi e IAM</strong> per l’account amministratore</td>
+</tr>
+<tr>
+<td>Quali richieste vengono bloccate?</td>
+<td><strong>Centro sicurezza</strong> e log del progetto per filtro HTTP e quarantene</td>
+</tr>
+<tr>
+<td>Il sito risponde regolarmente?</td>
+<td><strong>Risorse e disponibilità</strong> e i monitor configurati in Uptime Kuma</td>
+</tr>
+<tr>
+<td>Il sito è lento quando il PC è sotto carico?</td>
+<td>Metriche Glances e tempi di risposta registrati nello stesso intervallo</td>
+</tr>
+<tr>
+<td>Perché una pubblicazione è fallita?</td>
+<td>Verifica HTTPS e log del progetto, poi <strong>AI Chat</strong> per interpretare gli esiti</td>
+</tr>
+</tbody>
+</table>
+<h2 id="esempio-di-monitoraggio-per-un-team">Esempio di monitoraggio per un team</h2>
+<p>Marta configura in Kuma un monitor per l’anteprima locale e, dopo la pubblicazione, un secondo monitor per l’URL HTTPS. Se entrambi falliscono, controlla prima lo stato del progetto e del server. Se risponde solo l’anteprima, controlla nodo, Funnel e DNS. Una prova da rete mobile verifica il percorso di un visitatore indipendente dal PC che ospita Sentinel.</p>
+<h2 id="esempio-di-analisi-e-risposta">Esempio di analisi e risposta</h2>
+<p>Dopo un aumento delle richieste bloccate, annota il progetto, l’ora e la regola che ha generato il blocco. In <strong>AI Chat</strong> puoi chiedere «Per il progetto Studio, cosa mostrano i log delle richieste bloccate e quali controlli posso fare?». Confronta la risposta con i log prima di intervenire. Se Autopilot è attivo, verifica nel registro quale azione ha eseguito. Un aumento dei blocchi HTTP, da solo, non basta a identificare un attacco DDoS.</p>
+<hr />
+<p><strong>Creato da Nishfox · 2026</strong></p>
+</main></body></html>

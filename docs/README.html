@@ -1,0 +1,100 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sentinel</title><link rel="stylesheet" href="documentation.css"><link rel="alternate" hreflang="en" href="README.html"><link rel="alternate" hreflang="it" href="Leggimi.html"><script defer src="documentation-language.js"></script></head><body><nav class="doc-nav"><a href="index.html">Sentinel</a><a href="README.html">English</a><a href="Leggimi.html">Italiano</a></nav><main><h1 id="sentinel-decentralized-node-community-edition">Sentinel Decentralized Node — Community Edition</h1>
+<p><a href="README.html">English</a> · <a href=""Leggimi.md">Italiano</a></p>
+<p>Sentinel is a control center for hosting and publishing multiple static websites from your Windows PC. Each project has its own folder, local server and dedicated Tailscale node. Files are served by the host PC, and you choose when each site becomes public.</p>
+<p><strong>Windows · Self-hosted · Local dashboard · Optional local AI</strong></p>
+<p><a href="manuale-ENG.html">Illustrated user manual</a> · <a href="manuale-ENG.html">Read the manual on GitHub</a></p>
+<h2 id=""host-an-existing-website">Host an existing website</h2>
+<ol>
+<li>Set up the administrator account in the Windows installer wizard.</li>
+<li>Open the Sentinel shortcut or run <code>Avvia-Sentinel.bat</code>.</li>
+<li>Choose <strong>New site / node</strong>. Copy your existing HTML, CSS, JavaScript and images into the project folder. Replace the sample page with your <code>index.html</code>.</li>
+<li>Select <strong>Start</strong>, then <strong>Preview</strong>.</li>
+<li>Connect and authorize the dedicated Tailscale node, then select <strong>Publish</strong>.</li>
+<li>Open the exact HTTPS address on the project card. Test from a phone on mobile data as well.</li>
+</ol>
+<p>Some dashboard labels and technical messages may remain in Italian.</p>
+<h2 id="features">Features</h2>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Capabilities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sites</td>
+<td>Manage folders, servers, previews, logs and dedicated nodes</td>
+</tr>
+<tr>
+<td>Publishing</td>
+<td>Enable HTTPS with Tailscale Funnel and check DNS, TLS and HTTP</td>
+</tr>
+<tr>
+<td>Infrastructure</td>
+<td>Inspect local server, HTTP filter, node connection and public status separately</td>
+</tr>
+<tr>
+<td>Security</td>
+<td>Limit requests and concurrency, block hidden files, apply HTTP quarantines and check SHA-256 file integrity</td>
+</tr>
+<tr>
+<td>Monitoring</td>
+<td>Inspect resources and availability through optional CrowdSec, Glances and Uptime Kuma integrations</td>
+</tr>
+<tr>
+<td>Backups</td>
+<td>Export ZIP archives and restore them as new, stopped projects</td>
+</tr>
+<tr>
+<td>Access</td>
+<td>Protect the dashboard, administration APIs and backups with an administrator account</td>
+</tr>
+<tr>
+<td>AI</td>
+<td>Query local project evidence and relevant source excerpts with Qwen, including clarification choices</td>
+</tr>
+<tr>
+<td>Autopilot</td>
+<td>Run periodic checks and restore disabled HTTP filters under limited, logged rules</td>
+</tr>
+<tr>
+<td>Interface</td>
+<td>Choose light or dark mode and the language of the main menus</td>
+</tr>
+</tbody>
+</table>
+<h2 id="help-and-diagnostics">Help and diagnostics</h2>
+<p>The <strong>Instructions</strong> tag below <strong>Installation and diagnostics</strong> opens the illustrated HTML manual in a separate window. The language selector translates text where supported by the browser. Screenshots retain their original language.</p>
+<p><strong>Run check</strong> requests a fresh local component check. Rows update one at a time. Green indicates a successful check, yellow indicates attention or pending verification, and red indicates an error. Saved installation report results are identified separately.</p>
+<h2 id="languages">Languages</h2>
+<p>The website offers 11 language choices: Italian, English, Russian, French, German, Chinese, Spanish, Arabic, Hindi, Sinhala and Tamil.</p>
+<p>The installer asks for a language at startup. Standard pages are available in Italian, English, Russian, French, German, Spanish, Arabic and Tamil. Custom setup pages use Italian or English. Some messages remain in Italian. The installer language is not yet passed to the dashboard.</p>
+<p>GitHub renders this English README by default. Use the language links above to open another static document. GitHub Pages can run the website language selector.</p>
+<h2 id="offline-and-online-use">Offline and online use</h2>
+<p>With the components installed, local previews, backups and Qwen inference can work offline. Initial component and model downloads need Internet access. Public hosting requires the PC to remain on and connected, a Tailscale account and the relevant tailnet permissions.</p>
+<h2 id="windows-installation">Windows installation</h2>
+<p>Launch the wizard by double-clicking the installer or use PowerShell, either with a single command or step by step. <a href="installazione-ENG.html">Installation guide</a>.</p>
+<p>The wizard connects the PC to Tailscale when needed. In the dashboard, connect and authorize each project's dedicated node, then publish it. Your tailnet may require HTTPS or Funnel approval in the Tailscale console. <a href=""siti-ENG.md">Full publishing procedure</a>.</p>
+<p>The current Windows installer is unsigned. Windows may show a SmartScreen warning. Download the package from the project's official source.</p>
+<h2 id="documentation">Documentation</h2>
+<ul>
+<li><a href="siti-ENG.html">Sites and publishing</a></li>
+<li><a href=""sicurezza-ai-ENG.md">Security, monitoring and AI</a></li>
+<li><a href="collaudo-ENG.html">Testing and limitations</a></li>
+<li><a href=""github-ENG.md">Publishing on GitHub and signing releases</a></li>
+<li><a href="index.html">HTML showcase</a></li>
+<li><a href="THIRD-PARTY-ENG.html">Third-party components</a></li>
+<li><a href=""Leggimi.md">Italian documentation</a></li>
+</ul>
+<h2 id="author-and-editions">Author and editions</h2>
+<p>Community Edition is distributed under the MIT License. Enterprise Edition will be proprietary with separate terms.</p>
+<p><a href="privacy-ENG.html">Privacy</a> · <a href=""attribuzione-ENG.md">Attribution</a></p>
+<h3 id="enterprise-edition-in-development">Enterprise Edition · In development</h3>
+<p>The initial scope covers shared projects across PCs, synchronization, revocable per-user and per-project permissions, reviewed or direct updates, history and rollback.</p>
+<p>Planned extensions include corporate SSO and 2FA, token access, centralized backups, containers, remote terminal, Web Studio, VS Code integration and federation across locations. Priorities will follow early customer requirements. <a href="enterprise-ENG.html">Full Enterprise roadmap</a>.</p>
+<h2 id=""project-status">Project status</h2>
+<p>The recorded stress test completed 30,000 local requests across six temporary sites. A later automated suite run recorded 24 passes, 9 failures and 1 skip, including loopback access failures. The user reported a successful installation on a second PC after an initial error that remains to be reviewed. Public HTTPS responses were observed from two project nodes. A full independent installation, reboot and uninstall assessment remains outstanding.</p>
+<p>Community Edition hosts static sites. Managed application backends, PostgreSQL and two-factor authentication remain future work. Translations are partial. Filters operate at the HTTP application layer. AI output can be incorrect and requires verification.</p>
+<p><strong>Created by Nishfox · 2026</strong></p>
+</main></body></html>

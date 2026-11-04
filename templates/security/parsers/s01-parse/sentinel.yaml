@@ -1,0 +1,10 @@
+name: sentinel/http-rejected
+filter: "evt.Line.Labels.type == 'sentinel' && UnmarshalJSON(evt.Line.Raw, evt.Unmarshaled, 'sentinel') in ['', nil] && evt.Unmarshaled.sentinel.kind == 'rejected'"
+onsuccess: next_stage
+statics:
+  - meta: source_ip
+    expression: evt.Unmarshaled.sentinel.ip
+  - meta: log_type
+    value: sentinel_rejected
+  - target: evt.StrTime
+    expression: evt.Unmarshaled.sentinel.time

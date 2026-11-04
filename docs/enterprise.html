@@ -1,0 +1,104 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sentinel · enterprise</title><link rel="alternate" hreflang="en" href="enterprise-ENG.html"><link rel="alternate" hreflang="it" href="enterprise.html"><link rel="stylesheet" href="documentation.css"><script defer src="documentation-language.js"></script></head><body><nav class="doc-nav"><a href="index.html">Sentinel</a><a href="enterprise-ENG.html">English</a><a href="enterprise.html">Italiano</a></nav><main><header class="enterprise-brand"><img src="assets/sentinel-logo.png" alt="Sentinel logo" width="300"><div><strong>ENTERPRISE EDITION · IN SVILUPPO</strong></div></header>
+<h1 id="enterprise-edition-roadmap">Enterprise Edition · Roadmap</h1>
+<p><a href="enterprise-ENG.html">English</a> · <a href=""enterprise.md">Italiano</a></p>
+<p>Sentinel Enterprise è in sviluppo e sarà distribuito con una licenza proprietaria. Questo catalogo descrive le funzionalità proposte. Disponibilità, requisiti, integrazioni e priorità saranno definiti durante lo sviluppo.</p>
+<h2 id="collaborazione-e-progetti-remoti">Collaborazione e progetti remoti</h2>
+<ul>
+<li>Catalogo dei progetti condivisi tra computer della stessa tailnet.</li>
+<li>Apertura di copie di lavoro locali di progetti remoti.</li>
+<li>Sincronizzazione delle modifiche verso il PC host.</li>
+<li>Accesso in lettura e modifica assegnato per utente e progetto.</li>
+<li>Permesso separato per applicare aggiornamenti senza ulteriore approvazione.</li>
+<li>Revoca dei permessi dal PC host.</li>
+<li>Richieste di aggiornamento con revisione delle differenze tra file.</li>
+<li>Individuazione dei conflitti prima della sovrascrittura.</li>
+<li>Ruoli Owner, Developer, Designer, Security Operator e Viewer.</li>
+<li>Limitazione delle cartelle accessibili in base al ruolo.</li>
+<li>Storico delle versioni e ripristino di singoli file.</li>
+<li>Registro degli aggiornamenti applicati e del loro autore.</li>
+</ul>
+<h2 id="identita-e-accessi">Identità e accessi</h2>
+<ul>
+<li>Gestione di più utenti e ruoli RBAC.</li>
+<li>Integrazione SSO aziendale.</li>
+<li>Integrazione con Keycloak e directory LDAP.</li>
+<li>Autenticazione a due fattori per la dashboard.</li>
+<li>Valutazione di TOTP e chiavi hardware come metodi di autenticazione.</li>
+<li>Token personali con permessi limitati.</li>
+<li>Scadenza, rotazione e revoca dei token.</li>
+<li>Verifica dei permessi sulle operazioni di lettura e aggiornamento.</li>
+</ul>
+<h2 id="ambienti-di-sviluppo-e-strumenti">Ambienti di sviluppo e strumenti</h2>
+<ul>
+<li>Workspace isolati per i collaboratori.</li>
+<li>Gestione di container Docker dalla dashboard.</li>
+<li>Avvio, arresto, riavvio e controllo dello stato dei container.</li>
+<li>Metriche CPU, RAM e rete per gli ambienti gestiti.</li>
+<li>Politiche di riavvio automatico dopo un crash.</li>
+<li>Quote CPU e RAM per singolo ambiente.</li>
+<li>Code e limiti di utilizzo delle risorse AI, con supporto GPU da verificare per piattaforma.</li>
+<li>Terminale remoto con autorizzazioni dedicate.</li>
+<li>Script amministrativi per manutenzione e rotazione dei log.</li>
+<li>Accesso ai file tramite SFTP.</li>
+<li>Workspace condivisi tramite protocolli supportati.</li>
+<li>Integrazione con editor esterni.</li>
+<li>Estensione Sentinel per VS Code con stato della connessione.</li>
+<li>Esplorazione dei file autorizzati dal pannello dello sviluppatore.</li>
+<li>Invio di una richiesta di approvazione direttamente dall’editor.</li>
+<li>Web Studio accessibile dal browser, con ambienti dedicati agli utenti.</li>
+<li>Valutazione di un client desktop Sentinel Code Studio.</li>
+</ul>
+<h2 id="validazione-e-rilascio">Validazione e rilascio</h2>
+<ul>
+<li>Ambienti di prova separati dalla produzione.</li>
+<li>Controlli statici del codice prima del rilascio.</li>
+<li>Analisi AI delle modifiche come supporto alla revisione.</li>
+<li>Esecuzione di test e lint prima dell’approvazione.</li>
+<li>Blocco del rilascio quando i controlli obbligatori falliscono.</li>
+<li>Approvazione umana oppure applicazione diretta secondo i permessi del progetto.</li>
+<li>Snapshot prima dell’applicazione degli aggiornamenti.</li>
+<li>Distribuzione automatizzata verso servizi e container supportati.</li>
+<li>Ripristino di una versione precedente dopo un aggiornamento problematico.</li>
+<li>Gestione dei segreti separata dai file sorgenti.</li>
+<li>Cache locale delle dipendenze con politiche di verifica e aggiornamento.</li>
+</ul>
+<h2 id="audit-e-sicurezza">Audit e sicurezza</h2>
+<ul>
+<li>Registro centralizzato delle attività amministrative.</li>
+<li>Registrazione di utente, orario, progetto e risultato delle operazioni.</li>
+<li>Tracciamento delle sessioni e delle operazioni sui file.</li>
+<li>Audit delle attività AI con criteri di riservatezza e conservazione.</li>
+<li>Verifica di integrità dei registri mediante concatenazione di hash.</li>
+<li>Copie dei registri e riferimenti di verifica separati per rilevare alterazioni.</li>
+<li>Monitoraggio di comportamenti anomali.</li>
+<li>Health check di tunnel e ambienti di sviluppo.</li>
+<li>Integrazione delle decisioni CrowdSec nella gestione centralizzata delle protezioni.</li>
+<li>Valutazione delle protezioni di isolamento disponibili su ciascuna piattaforma.</li>
+<li>Kill switch amministrativo con ambito definito.</li>
+<li>Revoca dei token e arresto degli ambienti durante un’emergenza.</li>
+<li>Procedura di ripresa controllata dopo l’emergenza.</li>
+<li>Control Room con eventi e stati aggiornati in tempo reale.</li>
+<li>Priorità degli avvisi e filtri per ridurre le notifiche ripetitive.</li>
+<li>Notifiche Telegram configurabili.</li>
+<li>Webhook verso Slack, Discord e sistemi SIEM.</li>
+</ul>
+<h2 id="backup-e-infrastruttura">Backup e infrastruttura</h2>
+<ul>
+<li>Backup pianificati e cifrati.</li>
+<li>Destinazioni centralizzate su storage aziendale o cloud privato.</li>
+<li>Politiche di conservazione e rotazione degli snapshot.</li>
+<li>Ripristino e verifica periodica dei backup.</li>
+<li>Individuazione e stato dei nodi Sentinel autorizzati.</li>
+<li>Comunicazioni private tra nodi attraverso Tailscale.</li>
+<li>Scambio di stato e metriche tra istanze.</li>
+<li>Federazione tra sedi.</li>
+<li>Instradamento delle richieste secondo stato, carico e latenza.</li>
+<li>Studio della replica dei dati con procedure specifiche per SQLite e PostgreSQL.</li>
+<li>Failover tra nodi con verifica della consistenza dei dati.</li>
+<li>Offerte di assistenza e livelli di servizio da definire.</li>
+</ul>
+<h2 id="requisiti-e-stato">Requisiti e stato</h2>
+<p>La Community Edition mantiene le proprie funzioni di hosting, diagnostica, backup locale e AI locale. Enterprise aggiunge collaborazione, governo degli accessi e gestione centralizzata. Le capacità elencate richiedono sviluppo e collaudo. Le funzionalità basate su Linux o container richiederanno un ambiente compatibile. Le prestazioni, la resistenza alle manomissioni e gli eventuali requisiti normativi saranno oggetto di verifiche specifiche.</p>
+
+<footer class="enterprise-signature"><img src="assets/sentinel-logo.png" alt="" width="85"><p>Sentinel Decentralized Node<br><strong>Creato da Nishfox · 2026</strong></p></footer></main></body></html>
+

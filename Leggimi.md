@@ -90,7 +90,7 @@ Le estensioni previste includono SSO e 2FA aziendali, accesso tramite token, bac
 
 ## Stato del progetto
 
-Lo stress test registrato ha completato 30.000 richieste locali su sei siti temporanei. Una successiva esecuzione della suite ha registrato 24 test passati, 9 falliti e 1 saltato, con errori di accesso a loopback tra i fallimenti. La prova di pubblicazione di un nuovo nodo ha raggiunto la richiesta di login Tailscale. Il collaudo su Windows pulito e la verifica di quel nodo da rete mobile restano aperti.
+Lo stress test registrato ha completato 30.000 richieste locali su sei siti temporanei. Una successiva esecuzione della suite ha registrato 24 test passati, 9 falliti e 1 saltato, con errori di accesso a loopback tra i fallimenti. La demo TEST-Sentinel ha completato la pubblicazione e i controlli DNS, TLS e HTTP dal PC host. Il collaudo su Windows pulito e la verifica di quel nodo da rete mobile restano aperti.
 
 La Community Edition serve siti statici. Backend applicativi, PostgreSQL e autenticazione a due fattori sono possibili estensioni. Le traduzioni sono parziali. I filtri operano sul traffico HTTP applicativo. L’inferenza AI è consultiva e può produrre errori.
 

@@ -2,6 +2,8 @@
 
 # Sentinel Decentralized Node — Community Edition
 
+**[🌐 Apri la vetrina del progetto](https://nishfox.github.io/sentinel-decentralized-node/)**
+
 Sentinel è un centro di controllo per ospitare e pubblicare più siti statici dal proprio PC Windows. Ogni progetto ha una cartella, un server locale e un nodo Tailscale dedicato. I file vengono serviti dal PC e puoi scegliere quando rendere ciascun sito pubblico.
 
 **Windows · Self-hosted · Dashboard locale · AI opzionale**
@@ -64,7 +66,7 @@ Il pacchetto Windows attuale contiene un installer senza firma digitale. Windows
 - [Sicurezza, monitoraggio e AI](docs/sicurezza-ai.md)
 - [Collaudo e limiti](docs/collaudo.md)
 - [Preparazione della pubblicazione su GitHub](docs/github.md)
-- [Vetrina HTML](docs/index.html)
+- [Vetrina del progetto](https://nishfox.github.io/sentinel-decentralized-node/)
 - [Componenti di terze parti](THIRD-PARTY.md)
 
 ## Autore ed edizioni

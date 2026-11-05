@@ -1,9 +1,13 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sentinel</title><link rel="stylesheet" href="documentation.css"><link rel="alternate" hreflang="en" href="README.html"><link rel="alternate" hreflang="it" href="Leggimi.html"><script defer src="documentation-language.js"></script></head><body><nav class="doc-nav"><a href="index.html">Sentinel</a><a href="README.html">English</a><a href="Leggimi.html">Italiano</a></nav><main><h1 id="sentinel-decentralized-node-community-edition">Sentinel Decentralized Node — Community Edition</h1>
-<p><a href="README.html">English</a> · <a href=""Leggimi.md">Italiano</a></p>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sentinel - README</title><link rel="stylesheet" href="documentation.css"><link rel="alternate" hreflang="en" href="README.html"><link rel="alternate" hreflang="it" href="Leggimi.html"><script defer src="documentation-language.js"></script></head><body><nav class="doc-nav"><a href="index.html">Sentinel</a><a href="README.html">English</a><a href="Leggimi.html">Italiano</a></nav><main><h1 id="sentinel-decentralized-node-community-edition">Sentinel Decentralized Node — Community Edition</h1>
+<p><strong><a href="https://nishfox.github.io/Sentinel-Decentralized-Node/">🌐 Visit the project website</a></strong></p>
+<p><a href="README.html">English</a> · <a href="Leggimi.html">Italiano</a></p>
 <p>Sentinel is a control center for hosting and publishing multiple static websites from your Windows PC. Each project has its own folder, local server and dedicated Tailscale node. Files are served by the host PC, and you choose when each site becomes public.</p>
 <p><strong>Windows · Self-hosted · Local dashboard · Optional local AI</strong></p>
 <p><a href="manuale-ENG.html">Illustrated user manual</a> · <a href="manuale-ENG.html">Read the manual on GitHub</a></p>
-<h2 id=""host-an-existing-website">Host an existing website</h2>
+<h2 id="video-demo">Video demo</h2>
+<p><a href="https://github.com/Nishfox/Sentinel-Decentralized-Node/releases/download/v1.0.0/Sentinel-Live-Demo-English-4K-Music.mp4">English - 4K video</a> · <a href="https://github.com/Nishfox/Sentinel-Decentralized-Node/releases/download/v1.0.0/Sentinel-Live-Demo-Italiano-4K.mp4">Italiano - video 4K</a></p>
+<p><a href="https://nishfox.github.io/Sentinel-Decentralized-Node/#demo">Watch both videos on the project website</a></p>
+<h2 id="host-an-existing-website">Host an existing website</h2>
 <ol>
 <li>Set up the administrator account in the Windows installer wizard.</li>
 <li>Open the Sentinel shortcut or run <code>Avvia-Sentinel.bat</code>.</li>
@@ -74,27 +78,39 @@
 <h2 id="offline-and-online-use">Offline and online use</h2>
 <p>With the components installed, local previews, backups and Qwen inference can work offline. Initial component and model downloads need Internet access. Public hosting requires the PC to remain on and connected, a Tailscale account and the relevant tailnet permissions.</p>
 <h2 id="windows-installation">Windows installation</h2>
+<p><a href="https://github.com/Nishfox/sentinel-decentralized-node/releases/download/v1.0.0/Sentinel-Windows-1.0.0.zip">Download the Windows ZIP</a>.</p>
 <p>Launch the wizard by double-clicking the installer or use PowerShell, either with a single command or step by step. <a href="installazione-ENG.html">Installation guide</a>.</p>
-<p>The wizard connects the PC to Tailscale when needed. In the dashboard, connect and authorize each project's dedicated node, then publish it. Your tailnet may require HTTPS or Funnel approval in the Tailscale console. <a href=""siti-ENG.md">Full publishing procedure</a>.</p>
+<p>The wizard connects the PC to Tailscale when needed. In the dashboard, connect and authorize each project's dedicated node, then publish it. Your tailnet may require HTTPS or Funnel approval in the Tailscale console. <a href="siti-ENG.html">Full publishing procedure</a>.</p>
 <p>The current Windows installer is unsigned. Windows may show a SmartScreen warning. Download the package from the project's official source.</p>
 <h2 id="documentation">Documentation</h2>
 <ul>
 <li><a href="siti-ENG.html">Sites and publishing</a></li>
-<li><a href=""sicurezza-ai-ENG.md">Security, monitoring and AI</a></li>
+<li><a href="sicurezza-ai-ENG.html">Security, monitoring and AI</a></li>
 <li><a href="collaudo-ENG.html">Testing and limitations</a></li>
-<li><a href=""github-ENG.md">Publishing on GitHub and signing releases</a></li>
-<li><a href="index.html">HTML showcase</a></li>
+<li><a href="github-ENG.html">Publishing on GitHub and signing releases</a></li>
+<li><a href="https://nishfox.github.io/Sentinel-Decentralized-Node/">Project website</a></li>
 <li><a href="THIRD-PARTY-ENG.html">Third-party components</a></li>
-<li><a href=""Leggimi.md">Italian documentation</a></li>
+<li><a href="Leggimi.html">Italian documentation</a></li>
 </ul>
 <h2 id="author-and-editions">Author and editions</h2>
 <p>Community Edition is distributed under the MIT License. Enterprise Edition will be proprietary with separate terms.</p>
-<p><a href="privacy-ENG.html">Privacy</a> · <a href=""attribuzione-ENG.md">Attribution</a></p>
+<p><a href="privacy-ENG.html">Privacy</a> · <a href="attribuzione-ENG.html">Attribution</a></p>
 <h3 id="enterprise-edition-in-development">Enterprise Edition · In development</h3>
 <p>The initial scope covers shared projects across PCs, synchronization, revocable per-user and per-project permissions, reviewed or direct updates, history and rollback.</p>
 <p>Planned extensions include corporate SSO and 2FA, token access, centralized backups, containers, remote terminal, Web Studio, VS Code integration and federation across locations. Priorities will follow early customer requirements. <a href="enterprise-ENG.html">Full Enterprise roadmap</a>.</p>
-<h2 id=""project-status">Project status</h2>
-<p>The recorded stress test completed 30,000 local requests across six temporary sites. A later automated suite run recorded 24 passes, 9 failures and 1 skip, including loopback access failures. The user reported a successful installation on a second PC after an initial error that remains to be reviewed. Public HTTPS responses were observed from two project nodes. A full independent installation, reboot and uninstall assessment remains outstanding.</p>
+<h2 id="project-status">Project status</h2>
+<p>The public export test suite recorded <strong>31 passes, 3 skips and 0 failures</strong>. The recorded stress test completed 30,000 local requests across six temporary sites. A later automated suite run recorded 24 passes, 9 failures and 1 skip, including loopback access failures. The user reported a successful installation on a second PC after an initial error that remains to be reviewed. Public HTTPS responses were observed from two project nodes. A full independent installation, reboot and uninstall assessment remains outstanding.</p>
 <p>Community Edition hosts static sites. Managed application backends, PostgreSQL and two-factor authentication remain future work. Translations are partial. Filters operate at the HTTP application layer. AI output can be incorrect and requires verification.</p>
+<h2 id="why-i-am-building-sentinel">Why I am building Sentinel</h2>
+<p>I am Nishfox. My aim is to simplify technical tools and favor local and offline use wherever practical, reducing dependence on recurring subscriptions. Community Edition is my free, open-source contribution. Public publishing still requires Internet access and Tailscale permissions.</p>
+<p><em>The Community is free. Development time and the electricity bill have not found a free plan yet. 😄</em></p>
+<p>If this helps you, consider a star, useful feedback or sharing the project.</p>
+<h2 id="support-development">Support development</h2>
+<p>Community Edition is free and open source. If you find it useful, you can <a href="https://paypal.me/nishtattoo">support development with a voluntary PayPal contribution</a> of any amount. A star, useful feedback or sharing the project also helps.</p>
+<p>Contributions are optional and do not purchase goods or services.</p>
+<h2 id="dashboard-preview">Dashboard preview</h2>
+<p><img src="assets/screenshots/infrastructure.png" alt="Infrastructure map" /></p>
+<p><img src="assets/screenshots/ai-analysis.png" alt="Local AI analysis" /></p>
+<p><img src="assets/screenshots/monitoring.png" alt="Monitoring" /></p>
 <p><strong>Created by Nishfox · 2026</strong></p>
 </main></body></html>

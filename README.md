@@ -1,6 +1,6 @@
 # Sentinel Decentralized Node — Community Edition
 
-**[🌐 Visit the project website](https://nishfox.github.io/sentinel-decentralized-node/)**
+**[🌐 Visit the project website](https://nishfox.github.io/Sentinel-Decentralized-Node/)**
 
 [English](README.md) · [Italiano](Leggimi.md)
 
@@ -9,6 +9,12 @@ Sentinel is a control center for hosting and publishing multiple static websites
 **Windows · Self-hosted · Local dashboard · Optional local AI**
 
 [Illustrated user manual](docs/manuale-ENG.html) · [Read the manual on GitHub](docs/manuale-ENG.md)
+
+## Video demo
+
+[English - 4K video](https://github.com/Nishfox/Sentinel-Decentralized-Node/releases/download/v1.0.0/Sentinel-Live-Demo-English-4K-Music.mp4) · [Italiano - video 4K](https://github.com/Nishfox/Sentinel-Decentralized-Node/releases/download/v1.0.0/Sentinel-Live-Demo-Italiano-4K.mp4)
+
+[Watch both videos on the project website](https://nishfox.github.io/Sentinel-Decentralized-Node/#demo)
 
 ## Host an existing website
 
@@ -70,7 +76,7 @@ The current Windows installer is unsigned. Windows may show a SmartScreen warnin
 - [Security, monitoring and AI](docs/sicurezza-ai-ENG.md)
 - [Testing and limitations](docs/collaudo-ENG.md)
 - [Publishing on GitHub and signing releases](docs/github-ENG.md)
-- [Project website](https://nishfox.github.io/sentinel-decentralized-node/)
+- [Project website](https://nishfox.github.io/Sentinel-Decentralized-Node/)
 - [Third-party components](THIRD-PARTY-ENG.md)
 - [Italian documentation](Leggimi.md)
 
@@ -92,6 +98,20 @@ The public export test suite recorded **31 passes, 3 skips and 0 failures**. The
 
 Community Edition hosts static sites. Managed application backends, PostgreSQL and two-factor authentication remain future work. Translations are partial. Filters operate at the HTTP application layer. AI output can be incorrect and requires verification.
 
+## Why I am building Sentinel
+
+I am Nishfox. My aim is to simplify technical tools and favor local and offline use wherever practical, reducing dependence on recurring subscriptions. Community Edition is my free, open-source contribution. Public publishing still requires Internet access and Tailscale permissions.
+
+*The Community is free. Development time and the electricity bill have not found a free plan yet. 😄*
+
+If this helps you, consider a star, useful feedback or sharing the project.
+
+## Support development
+
+Community Edition is free and open source. If you find it useful, you can [support development with a voluntary PayPal contribution](https://paypal.me/nishtattoo) of any amount. A star, useful feedback or sharing the project also helps.
+
+Contributions are optional and do not purchase goods or services.
+
 ## Dashboard preview
 
 ![Infrastructure map](docs/assets/screenshots/infrastructure.png)
@@ -101,4 +121,3 @@ Community Edition hosts static sites. Managed application backends, PostgreSQL a
 ![Monitoring](docs/assets/screenshots/monitoring.png)
 
 **Created by Nishfox · 2026**
-

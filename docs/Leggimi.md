@@ -2,11 +2,19 @@
 
 # Sentinel Decentralized Node — Community Edition
 
+**[🌐 Apri la vetrina del progetto](https://nishfox.github.io/Sentinel-Decentralized-Node/)**
+
 Sentinel è un centro di controllo per ospitare e pubblicare più siti statici dal proprio PC Windows. Ogni progetto ha una cartella, un server locale e un nodo Tailscale dedicato. I file vengono serviti dal PC e puoi scegliere quando rendere ciascun sito pubblico.
 
 **Windows · Self-hosted · Dashboard locale · AI opzionale**
 
-[Apri il manuale illustrato](docs/manuale.html) · [Leggi il manuale su GitHub](docs/manuale.md)
+[Apri il manuale illustrato](manuale.html) · [Leggi il manuale su GitHub](manuale.md)
+
+## Video dimostrativi
+
+[English - 4K video](https://github.com/Nishfox/Sentinel-Decentralized-Node/releases/download/v1.0.0/Sentinel-Live-Demo-English-4K-Music.mp4) · [Italiano - video 4K](https://github.com/Nishfox/Sentinel-Decentralized-Node/releases/download/v1.0.0/Sentinel-Live-Demo-Italiano-4K.mp4)
+
+[Guarda entrambi i video sulla vetrina](https://nishfox.github.io/Sentinel-Decentralized-Node/index-ITA.html#demo)
 
 ## Ospita un sito esistente
 
@@ -50,33 +58,35 @@ Con i componenti già installati puoi servire siti in locale, creare backup e us
 
 ## Installazione su Windows
 
-Puoi avviare il wizard di Windows con un doppio clic oppure da PowerShell, con un comando unico o passo per passo. [Guida di installazione](docs/installazione.md).
+[Scarica lo ZIP Windows](https://github.com/Nishfox/sentinel-decentralized-node/releases/download/v1.0.0/Sentinel-Windows-1.0.0.zip).
 
-Il wizard collega il PC a Tailscale se serve. Dalla dashboard colleghi e autorizzi il nodo dedicato al sito, poi premi **Pubblica**. La tailnet può chiedere di abilitare Funnel nella console Tailscale. [Procedura completa](docs/siti.md#tailscale-dal-primo-accesso-alla-pubblicazione).
+Puoi avviare il wizard di Windows con un doppio clic oppure da PowerShell, con un comando unico o passo per passo. [Guida di installazione](installazione.md).
+
+Il wizard collega il PC a Tailscale se serve. Dalla dashboard colleghi e autorizzi il nodo dedicato al sito, poi premi **Pubblica**. La tailnet può chiedere di abilitare Funnel nella console Tailscale. [Procedura completa](siti.md#tailscale-dal-primo-accesso-alla-pubblicazione).
 
 Il pacchetto Windows attuale contiene un installer senza firma digitale. Windows può mostrare un avviso di SmartScreen. Verifica di aver scaricato il pacchetto dalla fonte ufficiale del progetto.
 
 ## Documentazione
 
-- [Gestione dei siti e pubblicazione](docs/siti.md)
-- [Sicurezza, monitoraggio e AI](docs/sicurezza-ai.md)
-- [Collaudo e limiti](docs/collaudo.md)
-- [Preparazione della pubblicazione su GitHub](docs/github.md)
-- [Vetrina HTML](docs/index.html)
+- [Gestione dei siti e pubblicazione](siti.md)
+- [Sicurezza, monitoraggio e AI](sicurezza-ai.md)
+- [Collaudo e limiti](collaudo.md)
+- [Preparazione della pubblicazione su GitHub](github.md)
+- [Vetrina del progetto](https://nishfox.github.io/Sentinel-Decentralized-Node/)
 - [Componenti di terze parti](THIRD-PARTY.md)
 
 ## Autore ed edizioni
 
 La Community Edition è distribuita con licenza MIT. La futura Enterprise Edition sarà proprietaria e avrà condizioni separate.
 
-[Privacy](docs/privacy.md) · [Attribuzione](docs/attribuzione.md)
+[Privacy](privacy.md) · [Attribuzione](attribuzione.md)
 
 
 ### Enterprise Edition · In sviluppo
 
 Edizione proprietaria per team e organizzazioni. La prima fase è dedicata ai progetti condivisi tra PC, con sincronizzazione, permessi revocabili per utente e progetto, approvazione o pubblicazione diretta degli aggiornamenti, storico e ripristino.
 
-Le estensioni previste includono SSO e 2FA aziendali, accesso tramite token, backup centralizzati, gestione container, terminale remoto, Web Studio, integrazione con VS Code e federazione tra sedi. Le priorità saranno definite in base alle esigenze dei primi clienti. [Catalogo completo delle funzionalità previste](docs/enterprise.md).
+Le estensioni previste includono SSO e 2FA aziendali, accesso tramite token, backup centralizzati, gestione container, terminale remoto, Web Studio, integrazione con VS Code e federazione tra sedi. Le priorità saranno definite in base alle esigenze dei primi clienti. [Catalogo completo delle funzionalità previste](enterprise.md).
 
 ## Stato del progetto
 
@@ -86,9 +96,26 @@ La Community Edition serve siti statici. Backend applicativi, PostgreSQL e auten
 
 ---
 
+## Perché sto creando Sentinel
+
+Sono Nishfox. Voglio semplificare gli strumenti tecnici e favorire, dove possibile, soluzioni locali e offline che riducano la dipendenza dagli abbonamenti. La Community Edition è il mio contributo gratuito e open source. Per pubblicare sul web servono comunque Internet e le autorizzazioni Tailscale.
+
+*La Community è gratuita. Le ore di sviluppo e la bolletta, purtroppo, non hanno ancora trovato un piano free. 😄*
+
+Se il progetto ti è utile, puoi sostenerlo con una stella, feedback concreti o una condivisione.
+
+## Sostieni lo sviluppo
+
+La Community Edition è gratuita e open source. Se ti è utile, puoi [sostenere lo sviluppo con un contributo volontario tramite PayPal](https://paypal.me/nishtattoo), dell'importo che preferisci. Anche una stella, feedback concreti o una condivisione sono preziosi.
+
+Il contributo è facoltativo e non costituisce l'acquisto di prodotti o servizi.
+
+## Anteprima della dashboard
+
+![Mappa infrastruttura](assets/screenshots/infrastructure.png)
+
+![Analisi AI locale](assets/screenshots/ai-analysis.png)
+
+![Monitoraggio](assets/screenshots/monitoring.png)
+
 **Creato da Nishfox · 2026**
-
-
-
-
-

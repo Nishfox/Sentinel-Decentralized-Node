@@ -2,13 +2,19 @@
 
 # Sentinel Decentralized Node — Community Edition
 
-**[🌐 Apri la vetrina del progetto](https://nishfox.github.io/sentinel-decentralized-node/)**
+**[🌐 Apri la vetrina del progetto](https://nishfox.github.io/Sentinel-Decentralized-Node/)**
 
 Sentinel è un centro di controllo per ospitare e pubblicare più siti statici dal proprio PC Windows. Ogni progetto ha una cartella, un server locale e un nodo Tailscale dedicato. I file vengono serviti dal PC e puoi scegliere quando rendere ciascun sito pubblico.
 
 **Windows · Self-hosted · Dashboard locale · AI opzionale**
 
 [Apri il manuale illustrato](docs/manuale.html) · [Leggi il manuale su GitHub](docs/manuale.md)
+
+## Video dimostrativi
+
+[English - 4K video](https://github.com/Nishfox/Sentinel-Decentralized-Node/releases/download/v1.0.0/Sentinel-Live-Demo-English-4K-Music.mp4) · [Italiano - video 4K](https://github.com/Nishfox/Sentinel-Decentralized-Node/releases/download/v1.0.0/Sentinel-Live-Demo-Italiano-4K.mp4)
+
+[Guarda entrambi i video sulla vetrina](https://nishfox.github.io/Sentinel-Decentralized-Node/index-ITA.html#demo)
 
 ## Ospita un sito esistente
 
@@ -66,7 +72,7 @@ Il pacchetto Windows attuale contiene un installer senza firma digitale. Windows
 - [Sicurezza, monitoraggio e AI](docs/sicurezza-ai.md)
 - [Collaudo e limiti](docs/collaudo.md)
 - [Preparazione della pubblicazione su GitHub](docs/github.md)
-- [Vetrina del progetto](https://nishfox.github.io/sentinel-decentralized-node/)
+- [Vetrina del progetto](https://nishfox.github.io/Sentinel-Decentralized-Node/)
 - [Componenti di terze parti](THIRD-PARTY.md)
 
 ## Autore ed edizioni
@@ -90,6 +96,20 @@ La Community Edition serve siti statici. Backend applicativi, PostgreSQL e auten
 
 ---
 
+## Perché sto creando Sentinel
+
+Sono Nishfox. Voglio semplificare gli strumenti tecnici e favorire, dove possibile, soluzioni locali e offline che riducano la dipendenza dagli abbonamenti. La Community Edition è il mio contributo gratuito e open source. Per pubblicare sul web servono comunque Internet e le autorizzazioni Tailscale.
+
+*La Community è gratuita. Le ore di sviluppo e la bolletta, purtroppo, non hanno ancora trovato un piano free. 😄*
+
+Se il progetto ti è utile, puoi sostenerlo con una stella, feedback concreti o una condivisione.
+
+## Sostieni lo sviluppo
+
+La Community Edition è gratuita e open source. Se ti è utile, puoi [sostenere lo sviluppo con un contributo volontario tramite PayPal](https://paypal.me/nishtattoo), dell'importo che preferisci. Anche una stella, feedback concreti o una condivisione sono preziosi.
+
+Il contributo è facoltativo e non costituisce l'acquisto di prodotti o servizi.
+
 ## Anteprima della dashboard
 
 ![Mappa infrastruttura](docs/assets/screenshots/infrastructure.png)
@@ -99,9 +119,3 @@ La Community Edition serve siti statici. Backend applicativi, PostgreSQL e auten
 ![Monitoraggio](docs/assets/screenshots/monitoring.png)
 
 **Creato da Nishfox · 2026**
-
-
-
-
-
-
